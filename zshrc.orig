@@ -1,0 +1,28 @@
+PATH=~/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+PROMPT='%~%# '
+
+alias l=ls
+
+for file in .zsh/functions/*; do source $file; done
+
+alias x=extract
+
+autoload -Uz compinit && compinit
+# . ~/builds/z/z.sh
+. `brew --prefix`/etc/profile.d/z.sh
+
+# Load RVM into a shell session *as a function*
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# Add RVM to PATH for scripting
+PATH=$HOME/.rvm/bin:$PATH
+
+source ~/.nvm/nvm.sh
+# [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
+PATH=./node_modules/.bin:$PATH
+
+#THIS MUST BE AT THE END OF THE FILE FOR JENV TO WORK!!!
+[[ -s "/Users/nisanth/.jenv/bin/jenv-init.sh" ]] && source "/Users/nisanth/.jenv/bin/jenv-init.sh" && source "/Users/nisanth/.jenv/commands/completion.sh"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

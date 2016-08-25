@@ -1,0 +1,54 @@
+"*":
+  autocomplete:
+    includeCompletionsFromAllBuffers: false
+  "autocomplete-plus":
+    confirmCompletion: "enter"
+    includeCompletionsFromAllBuffers: true
+    maxVisibleSuggestions: 5
+    strictMatching: true
+    suggestionListFollows: "Word"
+  core:
+    projectHome: "/Users/nisanth/code"
+    themes: [
+      "native-ui"
+      "github-web"
+    ]
+  editor:
+    backUpBeforeSaving: true
+    confirmCheckoutHeadRevision: false
+    fontFamily: "Hack"
+    fontSize: 15
+    invisibles: {}
+    scrollPastEnd: true
+    showIndentGuide: true
+    softWrap: false
+  "exception-reporting":
+    userId: "f303a44e-5fef-3729-549d-462fc5f7ef2d"
+  "markdown-preview":
+    breakOnSingleNewline: true
+  metrics:
+    userId: "23ab5e146372cfd9663b5eec52f830fc002c8c2b"
+  "release-notes":
+    viewedVersion: "0.95.0"
+  "save-session":
+    dataSaveFolder: "/Users/nisanth/.atom/packages/save-session/projects"
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  "vim-surround": {}
+  welcome:
+    showOnStartup: false
+  whitespace: {}
+".erb.html.text":
+  editor:
+    tabLength: 4
+".haml":
+  whitespace:
+    removeTrailingWhitespace: true
+".ruby.source":
+  editor:
+    tabLength: 2
+  whitespace:
+    removeTrailingWhitespace: true
+".yaml":
+  whitespace:
+    removeTrailingWhitespace: true
