@@ -2,10 +2,7 @@
 # . ~/builds/z/z.sh
 . `brew --prefix`/etc/profile.d/z.sh
 
-# Add RVM to PATH for scripting
-export PATH=$PATH:$HOME/.rvm/bin
-
-source ~/.nvm/nvm.sh
+# source ~/.nvm/nvm.sh
 # [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 # export PATH=./node_modules/.bin:$PATH
 

@@ -7,14 +7,14 @@ set guioptions-=r
 set guioptions-=L
 set guioptions-=T
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
-Bundle 'kchmck/vim-coffee-script'
+Plugin 'kchmck/vim-coffee-script'
 
 " https://github.com/vim-ruby/vim-ruby/wiki/VimRubySupport
 filetype on
@@ -51,24 +51,24 @@ set sessionoptions="resize"
 let g:session_autosave='yes'
 let g:session_autosave_to = 'default'
 let g:session_autoload='yes'
-Bundle 'xolox/vim-misc'
-Bundle 'xolox/vim-session'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-session'
 
-" Bundle 'gcmt/taboo.vim'
+" Plugin 'gcmt/taboo.vim'
 " let g:taboo_tab_format='%N%f'
 
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 let NERDTreeShowBookmarks=1
 let NERDTreeShowLineNumbers=1
 let NERDTreeChDirMode=2
 let NERDTreeMouseMode=2
 map <C-n> :NERDTreeToggle<CR>
 
-Bundle 'wincent/Command-T'
+Plugin 'wincent/Command-T'
 let g:CommandTTagIncludeFilenames=1
 
-Bundle 'flazz/vim-colorschemes'
-colorscheme github
+Plugin 'flazz/vim-colorschemes'
+" colorscheme github
 " colorscheme codeschool
 hi clear CursorLineNR
 " Bundle 'altercation/vim-colors-solarized'
@@ -93,21 +93,23 @@ let g:acp_behaviorUserDefinedMeets='acp#meetsForKeyword'
 let g:acp_behaviorFileLength=-1
 let g:acp_behaviorRubyOmniMethodLength=-1
 let g:acp_behaviorRubyOmniSymbolLength=-1
-Bundle 'dirkwallenstein/vim-localcomplete'
-Bundle 'AutoComplPop'
+Plugin 'dirkwallenstein/vim-localcomplete'
+Plugin 'AutoComplPop'
 
-Bundle 'myusuf3/numbers.vim'
+Plugin 'myusuf3/numbers.vim'
 nnoremap <F3> :NumbersToggle<CR>
 nnoremap <F4> :NumbersOnOff<CR>
 
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-abolish'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tomtom/tcomment_vim'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'tomtom/tcomment_vim'
 " Bundle 'airblade/vim-gitgutter'
-Bundle 'Raimondi/delimitMate'
-Bundle 'tpope/vim-endwise'
-Bundle 'jgdavey/vim-blockle'
+Plugin 'Raimondi/delimitMate'
+Plugin 'tpope/vim-endwise'
+Plugin 'jgdavey/vim-blockle'
 
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-haml'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-haml'
+
+set tw=1024
