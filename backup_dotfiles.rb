@@ -1,3 +1,5 @@
+require "fileutils"
+
 class DotfileInfo
   def initialize(dotfile_info_string)
   	@dotfile_info_string = dotfile_info_string
