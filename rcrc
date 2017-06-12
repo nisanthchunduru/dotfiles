@@ -1,1 +1,2 @@
+EXCLUDES=README.md scripts/*""
 UNDOTTED="Brewfile"
