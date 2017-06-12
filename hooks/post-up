@@ -3,7 +3,7 @@
 # Show path bar in Finder
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true; killall Finder
 
-# Disable spelling autocorrect
+# Disable spelling correction
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Borrowed from https://robots.thoughtbot.com/rcm-for-rc-files-in-dotfiles-repos
