@@ -35,6 +35,7 @@ alias pub='cat ~/.ssh/id_rsa.pub | tee >(pbcopy)'
 alias sourcetree='open -a SourceTree'
 alias macdown='open -a MacDown'
 alias st=sourcetree .
+alias typora='open -a Typora'
 
 alias use_google_dns='networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4'
 alias use_adguard_dns='networksetup -setdnsservers Wi-Fi 176.103.130.130 176.103.130.131'
