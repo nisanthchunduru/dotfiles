@@ -1,3 +1,0 @@
-drb () {
-  unalias rspec
-}
