@@ -1,14 +1,35 @@
 #!/bin/bash
 
-# Show path bar in Finder
-defaults write com.apple.finder _FXShowPosixPathInTitle -bool true; killall Finder
-
-# Disable spelling correction
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
-
 # Use Google DNS
 networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4
 
+# Stop iTunes from launching when the Play/Pause button is pressed
+launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
+
+# Show path bar in Finder
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true; killall Finder
+
+# Disable OS X spelling correction
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+# Show Path Bar in Finder
+defaults write com.apple.finder ShowPathbar -bool true
+
+# Show full posix path in Finder window title
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+
+# Show file name extensions in Finder
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Hide all Desktop icons
+defaults write com.apple.finder CreateDesktop -bool false
+
+# Setup ZSH
+chsh -s /bin/zsh
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+
+# Install vim plugins
+#
 # Borrowed from https://robots.thoughtbot.com/rcm-for-rc-files-in-dotfiles-repos
 if [ -e $HOME/.vim/bundle/Vundle.vim ]; then
   pushd $HOME/.vim/bundle/Vundle.vim
