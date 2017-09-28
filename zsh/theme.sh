@@ -17,7 +17,11 @@ function git_branch_info {
   fi
 }
 function ruby_version_info {
-  rvm_prompt_output=`rvm-prompt`
+  rvm_prompt_output=`rvm current`
+
+  if [ $rvm_prompt_output = "system" ]; then
+    rvm_prompt_output="ruby-system"
+  fi
   # sed "s/ruby-/r-/g" <<<"$rvm_prompt_output"
   echo ${rvm_prompt_output/ruby-/r-}
 }
