@@ -37,6 +37,7 @@ brew "rcm"
 brew "memcached"
 brew "chromedriver"
 brew "readline"
+brew "colordiff"
 
 # mas "MenuTab for Facebook", id: 421358730
 mas "Kindle", id: 405399194
