@@ -81,6 +81,7 @@ cask "sublime-text"
 tap "caskroom/versions"
 cask "java7" # Required for elasticsearch
 cask "firefox"
+cask "slack"
 
 #
 # Other apps
