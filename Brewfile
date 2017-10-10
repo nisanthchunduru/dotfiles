@@ -38,6 +38,7 @@ brew "memcached"
 brew "chromedriver"
 brew "readline"
 brew "colordiff"
+brew "wifi-password"
 
 # mas "MenuTab for Facebook", id: 421358730
 mas "Kindle", id: 405399194
