@@ -1,4 +1,4 @@
-# Load Oh My Zsh
+# Configure and load Oh My Zsh
 source ~/.zsh/oh-my-zsh.sh
 
 MY_ZSH=~/.zsh
