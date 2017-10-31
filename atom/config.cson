@@ -9,6 +9,7 @@
     suggestionListFollows: "Word"
   core:
     projectHome: "/Users/nisanth/code"
+    telemetryConsent: "limited"
     themes: [
       "native-ui"
       "github-web"
