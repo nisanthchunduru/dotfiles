@@ -1,12 +1,12 @@
-# Configure and load Oh My Zsh
-source ~/.zsh/oh-my-zsh.sh
-
 MY_ZSH=~/.zsh
 
-setopt extendedglob
+# Configure and load Oh My Zsh
+source $MY_ZSH/oh-my-zsh.sh
 
+setopt extendedglob
 for file ($MY_ZSH/^oh-my-zsh.sh) source $file
-for file ($MY_ZSH/SupportBee/*) source $file
+
+source ~/.dotfiles/private_dotfiles/zsh/aliases.sh
 
 export PATH="$HOME/bin:$PATH"
 
