@@ -10,7 +10,7 @@ Install [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-Install [rcm](https://github.com/thoughtbot/rcm)
+Install ThoughtBot's dotfile management suite [rcm](https://github.com/thoughtbot/rcm)
 
 ```
 brew tap thoughtbot/formulae
