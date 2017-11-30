@@ -6,11 +6,11 @@ networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4
 # Stop iTunes from launching when the Play/Pause button is pressed
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 
-# Show path bar in Finder
-defaults write com.apple.finder _FXShowPosixPathInTitle -bool true; killall Finder
-
 # Disable OS X spelling correction
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+# Show path bar in Finder
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true; killall Finder
 
 # Show Path Bar in Finder
 defaults write com.apple.finder ShowPathbar -bool true
@@ -23,6 +23,8 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 # Hide all Desktop icons
 defaults write com.apple.finder CreateDesktop -bool false
+
+defaults write com.apple.screencapture location ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Screenshots/
 
 # Setup ZSH
 chsh -s /bin/zsh
