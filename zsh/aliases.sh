@@ -25,7 +25,7 @@ alias bs='bundle show'
 alias bcd='bundle-cd'
 alias bo='EDITOR=atom bundle open'
 
-alias run_migrations='bundle exec rails db:migrate'
+alias run_migrations='bundle exec rake db:migrate'
 
 alias invoker='NOEXEC_DISABLE=1 rvm default do invoker'
 alias rerun='NOEXEC_DISABLE=1 rvm default do rerun'
