@@ -9,22 +9,22 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/nul
 # Disable OS X spelling correction
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
+# Reduce use of transparency in OS X
+defaults write com.apple.universalaccess reduceTransparency -bool true
+
+# Hide all desktop icons
+defaults write com.apple.finder CreateDesktop -bool false
+
+defaults write com.apple.screencapture location ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Screenshots/
+
 # Show path bar in Finder
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true; killall Finder
-
-# Show Path Bar in Finder
-defaults write com.apple.finder ShowPathbar -bool true
 
 # Show full posix path in Finder window title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 # Show file name extensions in Finder
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-
-# Hide all Desktop icons
-defaults write com.apple.finder CreateDesktop -bool false
-
-defaults write com.apple.screencapture location ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Screenshots/
 
 # Setup ZSH
 chsh -s /bin/zsh
