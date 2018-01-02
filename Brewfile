@@ -64,6 +64,7 @@ cask "font-ubuntu"
 cask "font-hack"
 cask "font-roboto"
 cask "font-fira-mono"
+cask "font-source-sans-pro"
 
 cask "google-chrome"
 tap "caskroom/homebrew-versions"
