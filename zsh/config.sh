@@ -15,6 +15,9 @@ bindkey -M vicmd v edit-command-line
 
 fpath=($MY_ZSH/functions $fpath)
 # for file ($MY_ZSH/functions/*) autoload -Uz $(basename $file)
-for file ($MY_ZSH/functions/*~*\.disabled) autoload -Uz $(basename $file)
+for file ($MY_ZSH/functions/*~*\.disabled); do
+  function_name=$(basename $file)
+  autoload -Uz $function_name
+done
 
 # fpath=($MY_ZSH/completions $fpath)
