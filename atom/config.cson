@@ -38,7 +38,8 @@
   "vim-surround": {}
   welcome:
     showOnStartup: false
-  whitespace: {}
+  whitespace:
+    removeTrailingWhitespace: false
 ".erb.html.text":
   editor:
     tabLength: 4
