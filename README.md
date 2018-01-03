@@ -21,5 +21,12 @@ Run
 
 ```
 git clone git@github.com:nisanth074/dotfiles.git ~/.dotfiles
-rcup -C -d ~/.dotfiles/
+rcup -d ~/.dotfiles/
 ```
+If you wish to only symlink the dotfiles and not run the [hooks/post-up](https://github.com/nisanth074/dotfiles/blob/master/hooks/post-up) script post symlinking, run
+
+```
+rcup -d ~/.dotfiles/ -K
+```
+
+instead
