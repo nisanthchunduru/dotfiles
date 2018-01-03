@@ -11,7 +11,7 @@
     projectHome: "/Users/nisanth/code"
     telemetryConsent: "limited"
     themes: [
-      "native-ui"
+      "atom-light-ui"
       "github-web"
     ]
   editor:
@@ -38,7 +38,8 @@
   "vim-surround": {}
   welcome:
     showOnStartup: false
-  whitespace: {}
+  whitespace:
+    removeTrailingWhitespace: false
 ".erb.html.text":
   editor:
     tabLength: 4
