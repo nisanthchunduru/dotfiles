@@ -49,7 +49,7 @@ DISABLE_LS_COLORS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # plugins=(git)
 # plugins=(osx brew rvm gem rails)
-plugins=(osx)
+plugins=(osx git)
 
 source $ZSH/oh-my-zsh.sh
 

@@ -2,6 +2,7 @@ MY_ZSH=~/.zsh
 
 # Configure and load Oh My Zsh
 source $MY_ZSH/oh-my-zsh.sh
+unalias gpu
 
 setopt extendedglob
 for file ($MY_ZSH/^oh-my-zsh.sh) source $file
