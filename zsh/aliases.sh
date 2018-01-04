@@ -39,6 +39,9 @@ alias rerun='NOEXEC_DISABLE=1 rvm default do rerun'
 # alias an=ansible
 # alias anp=ansible-playbook
 
+# OS Dock
+add_spacer_tile="defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'; killall Dock"
+
 # Applications
 alias sourcetree='open -a SourceTree'
 alias macdown='open -a MacDown'
