@@ -3,7 +3,6 @@ alias symlink_dotfiles='rcup -d ~/.dotfiles/ -K'
 alias l=ls
 alias diff=colordiff
 alias cask='brew cask'
-alias r=rvm
 alias pub='cat ~/.ssh/id_rsa.pub | tee >(pbcopy)' # Print ssh public key
 
 # Git
@@ -27,6 +26,7 @@ alias bcd='bundle-cd'
 alias bo='EDITOR=atom bundle open'
 
 # Rails
+alias r='bundle exec rspec'
 alias run_migrations='bundle exec rake db:migrate'
 alias revert_migration='bundle exec rake db:rollback STEP=1'
 # https://github.com/mperham/sidekiq/wiki/Problems-and-Troubleshooting#my-sidekiq-process-is-crashing-what-do-i-do
