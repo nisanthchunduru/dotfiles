@@ -1,0 +1,6 @@
+# @example
+#   revert_migration 20171114090744
+revert_migration () {
+  migration_version=$1
+  bundle exec rake db:migrate:down VERSION=$migration_version
+}
