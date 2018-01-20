@@ -1,3 +1,5 @@
+alias reload='source ~/.zshrc'
+
 alias symlink_dotfiles='rcup -d ~/.dotfiles/ -K'
 
 alias l=ls
