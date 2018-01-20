@@ -84,6 +84,7 @@ tap "caskroom/versions"
 cask "java7" # Required for elasticsearch
 cask "firefox"
 cask "franz"
+cask "lepton"
 
 #
 # Other apps
