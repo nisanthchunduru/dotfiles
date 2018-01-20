@@ -51,6 +51,9 @@
     tabLength: 2
   whitespace:
     removeTrailingWhitespace: true
+".sql":
+  editor:
+    softWrap: true
 ".yaml":
   whitespace:
     removeTrailingWhitespace: true
