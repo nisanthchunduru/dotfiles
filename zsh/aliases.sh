@@ -31,6 +31,7 @@ alias bo='EDITOR=atom bundle open'
 alias r='bundle exec rspec'
 alias run_migrations='bundle exec rake db:migrate'
 alias revert_migration='bundle exec rake db:rollback STEP=1'
+alias dbschema='less db/schema.rb'
 # https://github.com/mperham/sidekiq/wiki/Problems-and-Troubleshooting#my-sidekiq-process-is-crashing-what-do-i-do
 alias print_native_gems="bundle exec ruby -e 'puts Gem.loaded_specs.values.select{ |i| !i.extensions.empty? }.map{ |i| i.name }'"
 
