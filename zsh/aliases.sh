@@ -18,6 +18,7 @@ alias gl='git log'
 alias gcp='git cherry-pick'
 alias gri='git rebase -i'
 alias gf='git fetch'
+alias grm='git rm'
 
 # Bundler
 alias b=bundle
