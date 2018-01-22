@@ -1,3 +1,4 @@
+# Zsh
 alias reload='source ~/.zshrc'
 
 alias symlink_dotfiles='rcup -d ~/.dotfiles/ -K'
@@ -42,6 +43,9 @@ alias rerun='NOEXEC_DISABLE=1 rvm default do rerun'
 # Ansible
 # alias an=ansible
 # alias anp=ansible-playbook
+
+# Homebrew
+alias bb='brew bundle --global'
 
 # Applications
 alias sourcetree='open -a SourceTree'
