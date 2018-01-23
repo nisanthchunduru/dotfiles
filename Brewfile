@@ -79,12 +79,13 @@ cask "itsycal"
 cask "skype"
 cask "dropbox"
 cask "sublime-text"
-# cask "atom", { args: { appdir: "/Applications" } }
-tap "caskroom/versions"
-cask "java7" # Required for elasticsearch
 cask "firefox"
 cask "franz"
 cask "lepton"
+cask "authy"
+# cask "atom", { args: { appdir: "/Applications" } }
+tap "caskroom/versions"
+cask "java7" # Required for elasticsearch
 
 #
 # Other apps
