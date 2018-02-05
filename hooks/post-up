@@ -84,15 +84,13 @@ if [ ! -e ~/builds/redis-2.8.4 ]; then
   mkdir -p /usr/local/var/db/redis28/
 fi
 
-# Install elastichsearch 0.90.7
-if [ ! -e ~/builds/elasticsearch-0.90.7 ]; then
+# Install elasticsearch 2.4.0
+if [ ! -e ~/builds/elasticsearch-2.4.0 ]; then
   mkdir -p ~/builds
   pushd ~/builds
-  wget https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-0.90.7.tar.gz
-  mv v0.90.7.tar.gz elasticsearch-0.90.7.tar.gz
-  tar xzf elasticsearch-0.90.7.tar.gz
+  wget https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.4.0/elasticsearch-2.4.0.tar.gz
+  tar xzf elasticsearch-2.4.0.tar.gz
   popd
-  mkdir -p /usr/local/var/db/redis/
 fi
 
 # cd ~/code/SupportBee-Rails
