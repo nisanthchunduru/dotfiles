@@ -28,17 +28,21 @@ brew "postgresql-9.1"
 # Install Redis 2.4
 # tap "nisanth074/SupportBee-homebrew-tap", "https://gitlab.com/nisanth074/SupportBee-homebrew-tap"
 # brew "redis24"
+brew "memcached"
+brew "geckodriver"
+brew "chromedriver"
+brew "libxml2"
 brew "icu4c"
 brew "graphviz"
 brew "dos2unix"
 brew "coreutils" # Install coreutils for the realpath command
 brew "mackup"
 brew "rcm"
-brew "memcached"
-brew "chromedriver"
 brew "readline"
 brew "colordiff"
 brew "wifi-password"
+cask "osxfuse" # Required for sshfs
+brew "sshfs"
 
 # mas "MenuTab for Facebook", id: 421358730
 mas "Kindle", id: 405399194
@@ -58,14 +62,6 @@ mas "Polymail", id: 1134717305
 mas "Newton", id: 1059655371
 mas "App Cleaner", id: 1013897218
 mas "Simplenote", id: 692867256
-
-tap "caskroom/fonts"
-cask "font-ubuntu"
-cask "font-hack"
-cask "font-roboto"
-cask "font-fira-mono"
-cask "font-source-sans-pro"
-cask "font-hack"
 
 cask "google-chrome"
 tap "caskroom/homebrew-versions"
@@ -87,8 +83,11 @@ cask "authy"
 tap "caskroom/versions"
 cask "java7" # Required for elasticsearch
 
-#
-# Other apps
-#
-
-# GoToMeeting
+# Fonts
+tap "caskroom/fonts"
+cask "font-ubuntu"
+cask "font-hack"
+cask "font-roboto"
+cask "font-fira-mono"
+cask "font-source-sans-pro"
+cask "font-hack"
