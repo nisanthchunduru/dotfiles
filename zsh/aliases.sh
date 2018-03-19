@@ -14,6 +14,8 @@ alias gs='git status'
 alias gcl='git clone'
 alias gb='git branch --sort=-creatordate'
 alias gco='git checkout'
+alias gcom='git checkout master'
+alias gcop='git checkout -' # Checkout to previous git branch
 alias gc='git commit'
 alias gl='git log'
 alias gcp='git cherry-pick'
