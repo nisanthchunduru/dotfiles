@@ -32,7 +32,7 @@ alias bcd='bundle-cd'
 alias bo='EDITOR=atom bundle open'
 
 # Rails
-alias r='bundle exec rspec'
+alias rspec='bundle exec rspec'
 alias run_migrations='bundle exec rake db:migrate'
 alias revert_last_migration='bundle exec rake db:rollback STEP=1'
 alias dbschema='less db/schema.rb'
