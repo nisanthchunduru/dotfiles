@@ -1,6 +1,6 @@
 # @example
-#   issuetopr 1234
-issuetopr () {
+#   attachtoissue 1234
+attachtoissue () {
   git_organization=`git config --get remote.origin.url | cut -d: -f2 | cut -d/ -f1`
   git_branch=`git rev-parse --symbolic-full-name --abbrev-ref HEAD`
   issue_number=$1
