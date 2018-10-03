@@ -1,9 +1,9 @@
 # @example
-#   remove_location_information ~/Desktop/Shared\ Photos
+#   strip_location_information ~/Desktop/Shared\ Photos
 #
 # @example
-#   remove_location_information ~/Desktop/IMG_0066.jpg
-remove_location_information () {
+#   strip_location_information ~/Desktop/IMG_0066.jpg
+strip_location_information () {
   if [ -d $1 ]; then
     for file_path in "$1"/*
     do
