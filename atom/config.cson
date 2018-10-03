@@ -12,13 +12,12 @@
     telemetryConsent: "limited"
     themes: [
       "atom-light-ui"
-      "github-web"
+      "github-2016-syntax"
     ]
   editor:
     backUpBeforeSaving: true
     confirmCheckoutHeadRevision: false
     fontFamily: "Hack"
-    fontSize: 15
     invisibles: {}
     scrollPastEnd: true
     showIndentGuide: true
