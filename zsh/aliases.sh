@@ -33,8 +33,9 @@ alias bcd='bundle-cd'
 alias bo='EDITOR=atom bundle open'
 
 # Rails
-alias rspec='bundle exec rspec'
-alias rails='bundle exec rails'
+alias bers='bundle exec rails s'
+alias ber='bundle exec rspec'
+alias bec='bundle exec cucumber'
 alias run_migrations='bundle exec rake db:migrate'
 alias revert_last_migration='bundle exec rake db:rollback STEP=1'
 alias dbschema='less db/schema.rb'
@@ -61,4 +62,3 @@ alias typora='open -a Typora'
 alias use_google_dns='networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4'
 alias use_cloudflare_dns='networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1'
 alias use_adguard_dns='networksetup -setdnsservers Wi-Fi 176.103.130.130 176.103.130.131'
-
