@@ -24,6 +24,7 @@ alias gcp='git cherry-pick'
 alias gri='git rebase -i'
 alias gf='git fetch'
 alias grm='git rm'
+alias discardchanges='git checkout --'
 
 # Bundler
 alias b=bundle
