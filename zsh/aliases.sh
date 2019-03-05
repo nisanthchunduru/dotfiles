@@ -7,6 +7,7 @@ alias l=ls
 alias diff=colordiff
 alias cask='brew cask'
 alias pub='cat ~/.ssh/id_rsa.pub | tee >(pbcopy)' # Print ssh public key
+alias subit='subdb d'
 
 # Git
 alias g=git
