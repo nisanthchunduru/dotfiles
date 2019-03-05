@@ -1,4 +1,7 @@
 "*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "4663705d-3bf9-48fd-b52d-4d77172670c3"
   autocomplete:
     includeCompletionsFromAllBuffers: false
   "autocomplete-plus":
