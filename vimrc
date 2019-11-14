@@ -7,14 +7,18 @@ set guioptions-=r
 set guioptions-=L
 set guioptions-=T
 
+" Initialize Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
 " let Vundle manage Vundle
 " required!
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'kchmck/vim-coffee-script'
+" Initialize Vim Plug
+call plug#begin()
+Plug 'cormacrelf/vim-colors-github'
+Plug 'scrooloose/nerdtree'
+call plug#end()
 
 " https://github.com/vim-ruby/vim-ruby/wiki/VimRubySupport
 filetype on
@@ -57,7 +61,7 @@ Plugin 'xolox/vim-session'
 " Plugin 'gcmt/taboo.vim'
 " let g:taboo_tab_format='%N%f'
 
-Plugin 'scrooloose/nerdtree'
+" Plugin 'scrooloose/nerdtree'
 let NERDTreeShowBookmarks=1
 let NERDTreeShowLineNumbers=1
 let NERDTreeChDirMode=2
@@ -68,7 +72,7 @@ Plugin 'wincent/Command-T'
 let g:CommandTTagIncludeFilenames=1
 
 Plugin 'flazz/vim-colorschemes'
-" colorscheme github
+colorscheme github
 " colorscheme codeschool
 hi clear CursorLineNR
 " Bundle 'altercation/vim-colors-solarized'
@@ -111,5 +115,4 @@ Plugin 'jgdavey/vim-blockle'
 
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-haml'
-
-set tw=1024
+Plugin 'kchmck/vim-coffee-script'
