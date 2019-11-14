@@ -4,6 +4,7 @@ alias reload='source ~/.zshrc'
 alias symlink_dotfiles='rcup -d ~/.dotfiles/ -K'
 
 alias l=ls
+alias s=ssh
 alias diff=colordiff
 alias cask='brew cask'
 alias pub='cat ~/.ssh/id_rsa.pub | tee >(pbcopy)' # Print ssh public key
