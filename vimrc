@@ -116,3 +116,6 @@ Plugin 'jgdavey/vim-blockle'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-haml'
 Plugin 'kchmck/vim-coffee-script'
+
+" Don't automatically wrap long lines
+set tw=0
