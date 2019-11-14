@@ -11,11 +11,14 @@
     strictMatching: true
     suggestionListFollows: "Word"
   core:
+    disabledPackages: [
+      "no-title-bar"
+    ]
     projectHome: "/Users/nisanth/code"
     telemetryConsent: "limited"
     themes: [
       "atom-light-ui"
-      "github-2016-syntax"
+      "github-web"
     ]
   editor:
     backUpBeforeSaving: true
