@@ -30,6 +30,9 @@
     softWrap: false
   "exception-reporting":
     userId: "f303a44e-5fef-3729-549d-462fc5f7ef2d"
+  "fuzzy-finder":
+    scoringSystem: "fast"
+    useRipGrep: true
   "markdown-preview":
     breakOnSingleNewline: true
   metrics:
