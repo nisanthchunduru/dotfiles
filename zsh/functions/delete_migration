@@ -1,0 +1,6 @@
+# @example
+#   delete_migration 20171114090744
+delete_migration () {
+  migration_version=$1
+  rvm default do ruby ~/.dotfiles/scripts/delete_migration.rb $migration_version
+}
