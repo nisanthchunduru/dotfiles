@@ -11,11 +11,13 @@ ZSH_THEME_GIT_PROMPT_DIRTY=''
 # PROMPT="%~ %{$fg[red]%}[`git rev-parse --abbrev-ref HEAD`]%{$reset_color%} %{$fg[red]%}[`~/.rvm/bin/rvm-prompt`]%{$reset_color%}%# "
 
 autoload -U colors && colors
+
 function git_branch_info {
   if [ -d ".git" ]; then
     echo " %{$fg[red]%}[`git rev-parse --abbrev-ref HEAD`]%{$reset_color%}"
   fi
 }
+
 function ruby_version_info {
   rvm_prompt_output=`rvm current`
 
@@ -27,4 +29,5 @@ function ruby_version_info {
 }
 # setopt prompt_subst
 # PROMPT="%~\$(git_branch_info) %{$fg[red]%}[\$(rvm-prompt)]%{$reset_color%}%# "
-PROMPT="%~ %{$fg[red]%}[\$(ruby_version_info)]%{$reset_color%}\$(git_branch_info)%# "
+# PROMPT="%~ %{$fg[red]%}[\$(ruby_version_info)]%{$reset_color%}\$(git_branch_info)%# "
+PROMPT="%~%{$fg[red]%}%{$reset_color%}\$(git_branch_info)%# "
