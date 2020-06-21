@@ -31,15 +31,16 @@ alias discardchanges='git checkout --'
 # Bundler
 alias b=bundle
 alias be='bundle exec'
+alias bes='bundle exec spring'
 alias bi='bundle install --path vendor/bundle'
 alias bs='bundle show'
 alias bcd='bundle-cd'
 alias bo='EDITOR=atom bundle open'
 
 # Rails
-alias bers='bundle exec rails s'
-alias ber='bundle exec rspec'
-alias bec='bundle exec cucumber'
+alias r='bundle exec spring rspec'
+alias jr='bundle exec spring rspec' # Just rspec, no spring
+alias c='bundle exec cucumber'
 alias run_migrations='bundle exec rake db:migrate'
 alias revert_last_migration='bundle exec rake db:rollback STEP=1'
 alias dbschema='less db/schema.rb'
