@@ -39,7 +39,7 @@ alias bo='EDITOR=atom bundle open'
 
 # Rails
 alias r='bundle exec spring rspec'
-alias jr='bundle exec spring rspec' # Just rspec, no spring
+alias jr='bundle exec rspec' # Just rspec, no spring
 alias c='bundle exec cucumber'
 alias run_migrations='bundle exec rake db:migrate'
 alias revert_last_migration='bundle exec rake db:rollback STEP=1'
