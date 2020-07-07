@@ -54,15 +54,11 @@ done
 
 # fpath=($ZSH_HOME/completions $fpath)
 
-# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# test -e "${HOME}/.iterm2_shell_integration.zsh" && source # "$HOME/.iterm2_shell_integration.zsh"
 
-if [ -z $ITERM_SESSION_ID ]; then
-  if [ -f "${HOME}/.iterm2_shell_integration.zsh" ]; then
-    source "${HOME}/.iterm2_shell_integration.zsh"
+if [ -f "$HOME/.iterm2_shell_integration.zsh" ]; then
+    source "$HOME/.iterm2_shell_integration.zsh"
     
-    iterm2_print_user_vars () {
-      iterm2_set_user_var rubyVersion `rvm current`
-      iterm2_set_user_var nodeVersion "node $(nvm current)"
-    }
+    iterm2_set_user_var rubyVersion $(rvm current)
+    iterm2_set_user_var nodeVersion "node $(nvm current)"
   fi
-fi
