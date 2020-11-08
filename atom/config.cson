@@ -13,17 +13,27 @@
   core:
     disabledPackages: [
       "no-title-bar"
+      "autocomplete-snippets"
+      "snippets"
+    ]
+    packagesWithKeymapsDisabled: [
+      "rspec"
+    ]
+    packagesWithSnippetsDisabled: [
+      "language-rspec"
+      "language-ruby-on-rails"
     ]
     projectHome: "/Users/nisanth/code"
     telemetryConsent: "limited"
     themes: [
       "atom-light-ui"
-      "github-web"
+      "github-2016-syntax"
     ]
   editor:
     backUpBeforeSaving: true
     confirmCheckoutHeadRevision: false
-    fontFamily: "Hack"
+    fontFamily: "Operator Mono"
+    fontSize: 9
     invisibles: {}
     scrollPastEnd: true
     showIndentGuide: true
@@ -39,6 +49,8 @@
     userId: "23ab5e146372cfd9663b5eec52f830fc002c8c2b"
   "release-notes":
     viewedVersion: "0.95.0"
+  rspec:
+    command: "bundle exec spring rspec"
   "save-session":
     dataSaveFolder: "/Users/nisanth/.atom/packages/save-session/projects"
   "tree-view":
