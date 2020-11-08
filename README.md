@@ -20,13 +20,12 @@ brew install rcm
 Run
 
 ```
-git clone git@github.com:nisanth074/dotfiles.git ~/.dotfiles
-rcup -d ~/.dotfiles/
+mkdir -p ~/repos
+git clone git@github.com:nisanth074/dotfiles.git ~/repos/dotfiles
+rcup -d ~/repos/dotfiles
 ```
-If you wish to only symlink the dotfiles and not run the [hooks/post-up](https://github.com/nisanth074/dotfiles/blob/master/hooks/post-up) script post symlinking, run
+If you wish to only symlink the dotfiles and not run the [hooks/post-up](https://github.com/nisanth074/dotfiles/blob/master/hooks/post-up) script post symlinking, instead run
 
 ```
-rcup -d ~/.dotfiles/ -K
+rcup -d ~/repos/dotfiles -K
 ```
-
-instead
