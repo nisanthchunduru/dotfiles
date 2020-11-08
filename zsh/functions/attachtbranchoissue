@@ -1,9 +1,9 @@
 # @example
-#   attachtoissue 1234
-attachtoissue () {
+#   attachbranchtoissue 1234
+attachbranchtoissue () {
   git_organization=`git config --get remote.origin.url | cut -d: -f2 | cut -d/ -f1`
   git_branch=`git rev-parse --symbolic-full-name --abbrev-ref HEAD`
   issue_number=$1
 
-  hub pull-request -i $issue_number -h $git_organization:$git_branch # $1 is the issue number
+  hub pull-request -i $issue_number -b stable -h $git_organization:$git_branch
 }
