@@ -1,37 +1,37 @@
 #!/bin/bash
 
+#
+# Configure OS X
+#
+
 # Use Google DNS
 networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4
-
 # Stop iTunes from launching when the Play/Pause button is pressed
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
-
 # Disable OS X spelling correction
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
-
 # Reduce use of transparency in OS X
 defaults write com.apple.universalaccess reduceTransparency -bool true
-
 # Hide all desktop icons
 defaults write com.apple.finder CreateDesktop -bool false
-
 defaults write com.apple.screencapture location ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Screenshots/
-
 # Show path bar in Finder
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true; killall Finder
-
 # Show full posix path in Finder window title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
-
 # Show file name extensions in Finder
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-# Setup ZSH
+#
+# Set zsh as the default shell and configure it
+#
 chsh -s /bin/zsh
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
+#
 # Install vim plugins
 #
+
 # Borrowed from https://robots.thoughtbot.com/rcm-for-rc-files-in-dotfiles-repos
 if [ -e $HOME/.vim/bundle/Vundle.vim ]; then
   pushd $HOME/.vim/bundle/Vundle.vim
@@ -42,62 +42,13 @@ else
 fi
 vim +PluginInstall +qall
 
+#
 # Install RVM
+#
+
 brew install gpg
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 \curl -sSL https://get.rvm.io | bash -s stable
 
-# Install postgres version manager
-curl -s -L https://raw.github.com/guedes/pgvm/master/bin/pgvm-self-install | bash
-source /Users/nisanth/.pgvm/pgvm_env
-
-# Install postgres 9.1.18
-if [ ! -e ~/.pgvm/environments/9.1.18 ]; then
-  pgvm install 9.1.18
-fi
-if [ ! -e /usr/local/var/postgres ]; then
-  initdb /usr/local/var/postgres -E utf8
-fi
-
-# Install redis 2.4.2
-if [ ! -e ~/builds/redis-2.4.2 ]; then
-  mkdir -p ~/builds
-  pushd ~/builds
-  wget https://github.com/antirez/redis/archive/2.4.2.tar.gz
-  mv 2.4.2.tar.gz redis-2.4.2.tar.gz
-  tar xzf redis-2.4.2.tar.gz
-  cd redis-2.4.2
-  brew install apple-gcc42
-  CC=/usr/local/bin/gcc-4.2 make
-  popd
-fi
-
-# Install redis 2.8.4
-if [ ! -e ~/builds/redis-2.8.4 ]; then
-  mkdir -p ~/builds
-  pushd ~/builds
-  wget http://download.redis.io/releases/redis-2.8.4.tar.gz
-  tar xzf redis-2.8.4.tar.gz
-  cd redis-2.8.4
-  make
-  popd
-  mkdir -p /usr/local/var/db/redis28/
-fi
-
-# Install elasticsearch 2.4.0
-if [ ! -e ~/builds/elasticsearch-2.4.0 ]; then
-  mkdir -p ~/builds
-  pushd ~/builds
-  wget https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.4.0/elasticsearch-2.4.0.tar.gz
-  tar xzf elasticsearch-2.4.0.tar.gz
-  popd
-fi
-
-# cd ~/code/SupportBee-Rails
-# invoker start invoker.ini
-# bundle install --path vendor/bundle
-# bundle exec rake db:setup
-# bundle exec rake db:migrate
-
-# Install rvm
+# Install Qwandry
 # gem install qwandry
