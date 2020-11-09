@@ -1,5 +1,5 @@
 # @example
-#   RAILS_ENV=production bundle exec rails console
+#   RAILS_ENV=production run_in_kube_pod bundle exec rails console
 run_in_kube_pod () {
   command=$@
   a_pod_name=$(kubectl -n $RAILS_ENV get pods --no-headers=true -o name | head -n 1)
