@@ -46,6 +46,8 @@ export NVM_DIR="/Users/nisanth/.nvm"
 
 # Load functions
 fpath=($ZSH_HOME/functions $fpath)
+
+export PATH="./node_modules/.bin:$PATH"
 # for file ($ZSH_HOME/functions/*) autoload -Uz $(basename $file)
 for file ($ZSH_HOME/functions/*~*\.disabled); do
   function_name=$(basename $file)
