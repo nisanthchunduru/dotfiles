@@ -9,6 +9,7 @@ alias diff=colordiff
 alias cask='brew cask'
 alias pub='cat ~/.ssh/id_rsa.pub | tee >(pbcopy)' # Print ssh public key
 alias sub='subdb d'
+alias strip_location_information="ruby ~/repos/dotfiles/scripts/strip_location_information.rb"
 
 # Homebrew
 alias bb='brew bundle --global'
