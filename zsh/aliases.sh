@@ -1,10 +1,8 @@
 # Zsh
 alias reload='source ~/.zshrc'
-
 alias symlink_dotfiles='rcup -d ~/.dotfiles/ -K'
 
 alias l=ls
-alias s=ssh
 alias diff=colordiff
 alias cask='brew cask'
 alias pub='cat ~/.ssh/id_rsa.pub | tee >(pbcopy)' # Print ssh public key
@@ -78,13 +76,20 @@ alias dbschema='less db/schema.rb'
 alias print_native_gems="bundle exec ruby -e 'puts Gem.loaded_specs.values.select { |i| !i.extensions.empty? }.map { |i| i.name }'"
 
 # RSpec
-alias r='bundle exec spring rspec'
-alias slr='bundle exec rspec' # Spring less rspec
+alias r='bundle exec rspec'
+alias sr='bundle exec spring rspec'
+alias s='bundle exec spring'
 alias ss='bundle exec spring stop'
 
-# Javascript
-alias y="yarn install"
+# Yarn
+alias y="yarn"
 alias yi="yarn install"
+
+# Jest
+alias j="jest"
+alias ju="jest -u"
+
+# Storybook
 alias sb="npm run storybook"
 
 # Cucumber
@@ -92,16 +97,6 @@ alias c='bundle exec cucumber'
 
 # Heroku
 alias h='heroku'
-
-# Kubernetes
-alias mb_production_bash="RAILS_ENV=production run_in_kube_pod bash"
-alias mbpb=mb_production_bash
-alias mb_production_rails_console="RAILS_ENV=production run_in_kube_pod bundle exec rails console"
-alias mbprc=mb_production_rails_console
-alias mb_staging_bash="RAILS_ENV=staging run_in_kube_pod bash"
-alias mbsb=mb_staging_bash
-alias mb_staging_rails_console="RAILS_ENV=staging run_in_kube_pod bundle exec rails console"
-alias mbsrc=mb_staging_rails_console
 
 # Ansible
 # alias an=ansible
