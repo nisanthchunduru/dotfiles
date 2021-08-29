@@ -23,9 +23,12 @@ defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 #
-# Set zsh as the default shell and configure it
+# Setup zsh
 #
+
+# Set zsh as the default shell
 chsh -s /bin/zsh
+# Install Oh My Zsh
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
 #
