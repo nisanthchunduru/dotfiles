@@ -30,7 +30,7 @@ Symlink the dotfiles
 rcup -d ~/repos/dotfiles -K
 ```
 
-Please note that the command above doesn't run the [hooks/post-up](https://github.com/nisanth074/dotfiles/blob/master/hooks/post-up) script which configures OS X to my liking. If you'd like the post-up hook script to be run (unlikely), use the command below instead
+Please note that the command above doesn't run the [hooks/post-up](https://github.com/nisanth074/dotfiles/blob/master/hooks/post-up) script which configures OS X to my liking. If you'd like the post-up hook script to be run, run the command below instead
 
 ```
 rcup -d ~/repos/dotfiles
