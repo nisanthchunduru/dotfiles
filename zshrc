@@ -1,3 +1,5 @@
+export DOTFILES=~/repos/dotfiles
+
 export ZSH_HOME=~/.zsh
 export PATH="$HOME/bin:$PATH"
 
@@ -26,7 +28,7 @@ source $ZSH_HOME/oh-my-zsh.sh
 unalias gpu
 source $ZSH_HOME/prompt.sh
 source $ZSH_HOME/aliases.sh
-source ~/.dotfiles/private_dotfiles/zsh/aliases.sh
+source $DOTFILES/private_dotfiles/zsh/aliases.sh
 source $ZSH_HOME/tools.sh
 
 # http://unix.stackexchange.com/questions/6620/how-to-edit-command-line-in-full-screen-editor-in-zsh
