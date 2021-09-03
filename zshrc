@@ -61,8 +61,8 @@ done
 # test -e "${HOME}/.iterm2_shell_integration.zsh" && source # "$HOME/.iterm2_shell_integration.zsh"
 
 if [ -f "$HOME/.iterm2_shell_integration.zsh" ]; then
-    source "$HOME/.iterm2_shell_integration.zsh"
-    
-    iterm2_set_user_var rubyVersion $(rvm current)
-    iterm2_set_user_var nodeVersion "node $(nvm current)"
-  fi
+  source "$HOME/.iterm2_shell_integration.zsh"
+  
+  iterm2_set_user_var rubyVersion $(rvm current)
+  iterm2_set_user_var nodeVersion "node $(nvm current)"
+fi
