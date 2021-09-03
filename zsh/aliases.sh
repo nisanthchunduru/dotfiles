@@ -11,6 +11,7 @@ alias strip_location_information="ruby ~/repos/dotfiles/scripts/strip_location_i
 
 # Homebrew
 alias bb='brew bundle --global'
+alias ibrew='arch -x86_64 /usr/local/bin/brew'
 
 # Applications
 alias sourcetree='open -a SourceTree'
