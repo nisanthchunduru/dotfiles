@@ -44,7 +44,7 @@ alias grm='git rm'
 alias discardchanges='git checkout --'
 
 # Invoker
-alias invoker='NOEXEC_DISABLE=1 rvm default do invoker'
+# alias invoker='NOEXEC_DISABLE=1 rvm default do invoker'
 alias i=invoker
 alias is=invoker start invoker.ini
 
