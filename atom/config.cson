@@ -27,13 +27,11 @@
     telemetryConsent: "limited"
     themes: [
       "atom-light-ui"
-      "github-2016-syntax"
+      "github-web"
     ]
   editor:
     backUpBeforeSaving: true
     confirmCheckoutHeadRevision: false
-    fontFamily: "Operator Mono"
-    fontSize: 9
     invisibles: {}
     scrollPastEnd: true
     showIndentGuide: true
