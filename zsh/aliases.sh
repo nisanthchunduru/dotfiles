@@ -51,9 +51,9 @@ alias is=invoker start invoker.ini
 # Docker
 alias d='docker'
 alias dco='docker-compose'
-alias db='docker-compose build'
-alias dup='docker-compose up'
-alias dupd='docker-compose up -d'
+alias dcb='docker-compose build'
+alias dcup='docker-compose up'
+alias dcupd='docker-compose up -d'
 
 # RVM
 alias rerun='NOEXEC_DISABLE=1 rvm default do rerun'
