@@ -1,6 +1,6 @@
 gpu () {
 	if [ $# -eq 0 ]; then
-	  current_git_branch=`git rev-parse --abbrev-ref HEAD`
+		current_git_branch=`git rev-parse --abbrev-ref HEAD`
 		git push origin $current_git_branch
 	else
 		git push $@
