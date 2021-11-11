@@ -42,6 +42,16 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export NVM_DIR="/Users/nisanth/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+# Borrowed from https://medium.com/@kinduff/automatic-version-switch-for-nvm-ff9e00ae67f3
+autoload -U add-zsh-hook
+load-nvmrc() {
+  if [[ -f .nvmrc ]]; then
+    nvm use --silent
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+
 # Load NVM bash completions
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
