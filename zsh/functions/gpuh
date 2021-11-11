@@ -1,0 +1,4 @@
+gpuh () {
+  current_git_branch=`git rev-parse --abbrev-ref HEAD`
+  git push heroku $current_git_branch
+}
