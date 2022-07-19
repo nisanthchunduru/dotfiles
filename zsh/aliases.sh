@@ -41,7 +41,9 @@ alias gcp='git cherry-pick'
 alias gri='git rebase -i'
 alias gf='git fetch'
 alias grm='git rm'
-alias discardchanges='git checkout --'
+alias git_discard_changes='git checkout --'
+# Borrowed from https://www.damirscorner.com/blog/posts/20210423-ChangingUrlsOfGitSubmodules.html
+alias git_clone_submodules='git submodule update --init --recursive --remote'
 
 # Invoker
 # alias invoker='NOEXEC_DISABLE=1 rvm default do invoker'
