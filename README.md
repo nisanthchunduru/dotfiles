@@ -4,6 +4,18 @@ My dotfiles
 
 ## Installation
 
+Install homebrew
+
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Install zsh
+
+```
+brew install zsh
+```
+
 Install [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 ```
