@@ -23,8 +23,8 @@ brew "httpie"
 tap "thoughtbot/formulae"
 brew "rcm"
 # Install PostgreSQL 9.1
-tap "petere/homebrew-postgresql"
-brew "postgresql-9.1"
+# tap "petere/homebrew-postgresql"
+# brew "postgresql-9.1"
 # Install Redis 2.4
 # tap "nisanth074/SupportBee-homebrew-tap", "https://gitlab.com/nisanth074/SupportBee-homebrew-tap"
 # brew "redis24"
@@ -42,54 +42,56 @@ brew "rcm"
 brew "readline"
 brew "colordiff"
 brew "wifi-password"
-cask "osxfuse" # Required for sshfs
-brew "sshfs"
+# cask "osxfuse" # Required for sshfs
+# brew "sshfs"
 brew "ghostscript" # Required for https://github.com/jakepetroules/littlebirdy
 
 # mas "MenuTab for Facebook", id: 421358730
 mas "Kindle", id: 405399194
 mas "The Unarchiver", id: 425424353
-mas "Twitter", id: 409789998
-mas "Xcode", id: 497799835
+# mas "Twitter", id: 409789998
 mas "Skitch", id: 425955336
 mas "VisualDiff", id: 434097068
-mas "Wunderlist", id: 410628904
-mas "Unibox", id: 702816521
+# mas "Wunderlist", id: 410628904
+# mas "Unibox", id: 702816521
 mas "Slack", id: 803453959
 mas "Antetype Viewer", id: 824152298
-mas "HazeOver", id: 430798174
-mas "Dash", id: 458034879
+# mas "HazeOver", id: 430798174
+# mas "Dash", id: 458034879
 mas "Wallcat", id: 1000397973
-mas "Polymail", id: 1134717305
-mas "Newton", id: 1059655371
+# mas "Polymail", id: 1134717305
+# mas "Newton", id: 1059655371
 mas "App Cleaner", id: 1013897218
 mas "Simplenote", id: 692867256
+# mas "Authy"
 
 cask "google-chrome"
-tap "caskroom/homebrew-versions"
+# tap "caskroom/homebrew-versions"
 cask "google-chrome-canary"
 cask "vlc"
 cask "iterm2"
-cask "popcorn-time"
-cask "sourcetree"
+# cask "popcorn-time"
+# cask "sourcetree"
 cask "fork"
 cask "itsycal"
-cask "skype"
-cask "dropbox"
-cask "sublime-text"
+# cask "skype"
+# cask "dropbox"
+# cask "sublime-text"
 cask "firefox"
-cask "franz"
-cask "lepton"
-cask "authy"
+# cask "franz"
+# cask "lepton"
+# cask "authy"
 # cask "atom", { args: { appdir: "/Applications" } }
-tap "caskroom/versions"
-cask "java7" # Required for elasticsearch
-cask "java8" # Required for logstash
-brew "logstash"
-cask "cumulus"
+# tap "caskroom/versions"
+# cask "java7" # Required for elasticsearch
+# cask "java8" # Required for logstash
+# brew "logstash"
+# cask "cumulus"
 
 # Fonts
 tap "caskroom/fonts"
 cask "font-ubuntu"
-cask "font-hack"
-cask "font-fira-mono"
+# cask "font-hack"
+# cask "font-fira-mono"
+
+mas "Xcode", id: 497799835
