@@ -89,6 +89,8 @@ cask "firefox"
 # cask "java8" # Required for logstash
 # brew "logstash"
 # cask "cumulus"
+cask "google-drive"
+cask "scroll-reverser"
 
 # Fonts
 tap "caskroom/fonts"
