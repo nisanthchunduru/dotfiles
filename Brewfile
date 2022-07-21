@@ -45,6 +45,7 @@ brew "wifi-password"
 # cask "osxfuse" # Required for sshfs
 # brew "sshfs"
 brew "ghostscript" # Required for https://github.com/jakepetroules/littlebirdy
+brew "htop"
 
 # mas "MenuTab for Facebook", id: 421358730
 mas "Kindle", id: 405399194
