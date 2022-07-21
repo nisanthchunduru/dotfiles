@@ -64,6 +64,7 @@ mas "Wallcat", id: 1000397973
 mas "App Cleaner", id: 1013897218
 mas "Simplenote", id: 692867256
 # mas "Authy"
+mas "Telegram", id: 747648890
 
 cask "google-chrome"
 # tap "caskroom/homebrew-versions"
