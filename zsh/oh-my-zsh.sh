@@ -49,7 +49,8 @@ DISABLE_LS_COLORS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # plugins=(git)
 # plugins=(osx brew rvm gem rails)
-plugins=(macos git)
+# Partially borrowed from https://stackoverflow.com/questions/58187542/how-to-setup-vi-editing-mode-for-zsh/58188295#58188295
+plugins=(macos git vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
