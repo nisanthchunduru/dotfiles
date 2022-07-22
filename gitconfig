@@ -3,6 +3,7 @@
 	email = nisanth074@gmail.com
 [core]
 	excludesfile = /Users/nisanth/.gitignore_global
+	editor = vim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
