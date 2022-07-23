@@ -105,3 +105,6 @@ alias h='heroku'
 # Ansible
 # alias an=ansible
 # alias anp=ansible-playbook
+
+alias strip_image_metadata="rvm default do ruby ~/repos/dotfiles/scripts/strip_image_metadata.rb"
+alias heic_to_jpg="rvm default do ruby ~/repos/dotfiles/scripts/heic_to_jpg.rb"
