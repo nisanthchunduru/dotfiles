@@ -46,6 +46,7 @@ brew "wifi-password"
 # brew "sshfs"
 brew "ghostscript" # Required for https://github.com/jakepetroules/littlebirdy
 brew "htop"
+brew "visual-studio-code"
 
 # mas "MenuTab for Facebook", id: 421358730
 mas "Kindle", id: 405399194
@@ -91,6 +92,8 @@ cask "firefox"
 # cask "cumulus"
 cask "google-drive"
 cask "scroll-reverser"
+cask "webtorrent"
+cask "meld"
 
 # Fonts
 tap "caskroom/fonts"
