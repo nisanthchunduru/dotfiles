@@ -13,6 +13,8 @@ alias intel='arch -x86_64'
 # Homebrew
 alias bb='brew bundle --global'
 alias ibrew='arch -x86_64 /usr/local/bin/brew'
+alias bri='brew install'
+alias brs='brew search'
 
 # Applications
 alias sourcetree='open -a SourceTree'
