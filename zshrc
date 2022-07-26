@@ -3,8 +3,9 @@ export DOTFILES=~/repos/dotfiles
 export ZSH_HOME=~/.zsh
 export PATH="$HOME/bin:$PATH"
 
-export EDITOR='vim'
+# export EDITOR='vim'
 # export EDITOR='nvim'
+export EDITOR='code'
 
 # Emacs mode
 bindkey -e
