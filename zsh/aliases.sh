@@ -105,6 +105,9 @@ alias c='bundle exec cucumber'
 # Heroku
 alias h='heroku'
 
+# Kubernetes
+alias kc='kubectl'
+
 # Ansible
 # alias an=ansible
 # alias anp=ansible-playbook
