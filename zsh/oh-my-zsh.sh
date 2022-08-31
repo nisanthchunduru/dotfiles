@@ -50,7 +50,7 @@ DISABLE_LS_COLORS="true"
 # plugins=(git)
 # plugins=(osx brew rvm gem rails)
 # Partially borrowed from https://stackoverflow.com/questions/58187542/how-to-setup-vi-editing-mode-for-zsh/58188295#58188295
-plugins=(macos git vi-mode)
+plugins=(macos git vi-mode zsh-yarn-completions)
 
 source $ZSH/oh-my-zsh.sh
 
