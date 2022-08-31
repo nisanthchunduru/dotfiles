@@ -15,7 +15,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Install Plug
-" 
+"
 " Borrowed from https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
@@ -81,7 +81,7 @@ Plugin 'wincent/Command-T'
 let g:CommandTTagIncludeFilenames=1
 
 Plugin 'flazz/vim-colorschemes'
-colorscheme github
+" colorscheme github
 " colorscheme codeschool
 hi clear CursorLineNR
 " Bundle 'altercation/vim-colors-solarized'
