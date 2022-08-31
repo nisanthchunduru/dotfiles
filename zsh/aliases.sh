@@ -9,6 +9,7 @@ alias pub='cat ~/.ssh/id_rsa.pub | tee >(pbcopy)' # Print ssh public key
 alias sub='subdb d'
 alias strip_location_information="ruby ~/repos/dotfiles/scripts/strip_location_information.rb"
 alias intel='arch -x86_64'
+alias x=exit
 
 # Homebrew
 alias bb='brew bundle --global'
@@ -47,6 +48,10 @@ alias grm='git rm'
 alias git_discard_changes='git checkout --'
 # Borrowed from https://www.damirscorner.com/blog/posts/20210423-ChangingUrlsOfGitSubmodules.html
 alias git_clone_submodules='git submodule update --init --recursive --remote'
+
+# Tmux
+alias t=tmux
+alias ta='tmux attach'
 
 # Invoker
 # alias invoker='NOEXEC_DISABLE=1 rvm default do invoker'
@@ -102,15 +107,23 @@ alias sb="npm run storybook"
 # Cucumber
 alias c='bundle exec cucumber'
 
-# Heroku
-alias h='heroku'
-
-# Kubernetes
-alias kc='kubectl'
-
 # Ansible
 # alias an=ansible
 # alias anp=ansible-playbook
+
+# Kubernetes
+alias k='kubectl'
+alias kc='kubectl'
+alias kcc='kubectl config current-context'
+
+# Terraform
+alias tf='terraform'
+alias tff='terraform format'
+alias tfv='terraform validate'
+alias tfa='terraform apply'
+
+# Heroku
+alias h='heroku'
 
 alias strip_image_metadata="rvm default do ruby ~/repos/dotfiles/scripts/strip_image_metadata.rb"
 alias heic_to_jpg="rvm default do ruby ~/repos/dotfiles/scripts/heic_to_jpg.rb"
