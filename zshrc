@@ -7,14 +7,13 @@ export PATH="$HOME/bin:$PATH"
 # export EDITOR='nvim'
 export EDITOR='code'
 
-# Emacs mode
-bindkey -e
-
-# Vim mode
-# bindkey -v
-# bindkey '^R' history-incremental-search-backward
-
 setopt extendedglob
+
+# export ZPLUG_HOME=/opt/homebrew/opt/zplug
+# source $ZPLUG_HOME/init.zsh
+
+# zplug "chrisands/zsh-yarn-completions", defer:2
+# zplug "chrisands/zsh-yarn-completions"
 
 # for file ($ZSH_HOME/^.zshrc) source $file
 # for file ($ZSH_HOME/^.zshrc) do
@@ -35,7 +34,7 @@ source $ZSH_HOME/tools.sh
 # http://unix.stackexchange.com/questions/6620/how-to-edit-command-line-in-full-screen-editor-in-zsh
 autoload edit-command-line
 zle -N edit-command-line
-bindkey -M vicmd v edit-command-line
+# bindkey -M vicmd v edit-command-line
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
@@ -86,3 +85,15 @@ if [ -f "$HOME/.iterm2_shell_integration.zsh" ]; then
 fi
 
 [[ -d ~/.pgenv ]] && export PATH="$HOME/.pgenv/bin:$HOME/.pgenv/pgsql/bin:$PATH"
+
+# Emacs mode
+bindkey -e
+
+# Vim mode
+# bindkey -v
+# bindkey '^R' history-incremental-search-backward
+
+# export DIRENV_LOG_FORMAT=
+# eval "$(direnv hook zsh)"
+
+export KUBECONFIG="$HOME/repos/SupportBee/SupportBee-Rails/kube_config"
