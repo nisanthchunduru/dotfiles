@@ -39,8 +39,11 @@ fi
 
 # Set zsh as the default shell
 chsh -s /bin/zsh
+
 # Install Oh My Zsh
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+# Install zsh yarn completions plugin
+git clone https://github.com/chrisands/zsh-yarn-completions ~/.oh-my-zsh/custom/plugins/zsh-yarn-completions
 
 #
 # Install vim plugins
