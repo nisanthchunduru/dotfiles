@@ -25,14 +25,12 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 git config --global core.editor
 
 # Install homebrew
-if [ ! -d "/opt/homebrew" ]
+if [ ! -d "/opt/homebrew" ]; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-then
 fi
 # Install x86 homebrew
-if [ ! -d "/usr/local/Cellar" ]
+if [ ! -d "/usr/local/Cellar" ]; then
   arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-then
 fi
 
 #
