@@ -33,7 +33,7 @@ Clone the repo
 
 ```
 mkdir -p ~/repos
-git clone git@github.com:nisanth074/dotfiles.git ~/repos/dotfiles
+git clone --recurse-submodules git@github.com:nisanth074/dotfiles.git ~/repos/dotfiles
 ```
 
 Symlink the dotfiles
