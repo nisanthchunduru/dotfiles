@@ -53,7 +53,7 @@ mas "Kindle", id: 405399194
 mas "The Unarchiver", id: 425424353
 # mas "Twitter", id: 409789998
 mas "Skitch", id: 425955336
-mas "VisualDiff", id: 434097068
+# mas "VisualDiff", id: 434097068
 # mas "Wunderlist", id: 410628904
 # mas "Unibox", id: 702816521
 mas "Slack", id: 803453959
