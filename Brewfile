@@ -94,6 +94,7 @@ cask "google-drive"
 cask "scroll-reverser"
 cask "webtorrent"
 cask "meld"
+cask "whatsapp"
 
 # Fonts
 tap "caskroom/fonts"
