@@ -47,6 +47,9 @@ brew "wifi-password"
 brew "ghostscript" # Required for https://github.com/jakepetroules/littlebirdy
 brew "htop"
 brew "visual-studio-code"
+brew "awscli"
+brew "session-manager"
+brew "cloudflared"
 
 # mas "MenuTab for Facebook", id: 421358730
 mas "Kindle", id: 405399194
