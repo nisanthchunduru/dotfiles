@@ -104,5 +104,6 @@ tap "caskroom/fonts"
 cask "font-ubuntu"
 # cask "font-hack"
 # cask "font-fira-mono"
+cask "font-ubuntu-mono"
 
 mas "Xcode", id: 497799835
