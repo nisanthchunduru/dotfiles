@@ -95,5 +95,3 @@ bindkey -e
 
 # export DIRENV_LOG_FORMAT=
 # eval "$(direnv hook zsh)"
-
-export KUBECONFIG="$HOME/repos/SupportBee/SupportBee-Rails/kube_config"
