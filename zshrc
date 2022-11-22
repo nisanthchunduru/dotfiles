@@ -162,7 +162,7 @@ setopt extendedglob
 #   source $file
 # done
 # source $ZSH_HOME/oh-my-zsh.sh
-unalias gpu
+# unalias gpu
 source $ZSH_HOME/prompt.sh
 source $ZSH_HOME/aliases.sh
 source $DOTFILES/private_dotfiles/zsh/aliases.sh
@@ -233,3 +233,4 @@ bindkey -e
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
