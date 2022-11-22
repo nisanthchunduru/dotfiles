@@ -84,8 +84,6 @@ if [ -f "$HOME/.iterm2_shell_integration.zsh" ]; then
   iterm2_set_user_var nodeVersion "node $(nvm current)"
 fi
 
-[[ -d ~/.pgenv ]] && export PATH="$HOME/.pgenv/bin:$HOME/.pgenv/pgsql/bin:$PATH"
-
 # Emacs mode
 bindkey -e
 
