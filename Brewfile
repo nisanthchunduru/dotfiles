@@ -51,6 +51,7 @@ brew "visual-studio-code"
 brew "awscli"
 brew "session-manager"
 brew "cloudflared"
+brew "tmux"
 
 # mas "MenuTab for Facebook", id: 421358730
 mas "Kindle", id: 405399194

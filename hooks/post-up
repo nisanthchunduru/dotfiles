@@ -4,6 +4,8 @@
 # Configure OS X
 #
 
+touch ~/.hushlogin
+
 # Use Google DNS
 networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4
 # Stop iTunes from launching when the Play/Pause button is pressed
