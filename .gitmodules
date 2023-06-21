@@ -1,4 +1,0 @@
-[submodule "private_dotfiles"]
-	path = private_dotfiles
-	# url = git@gitlab.com:nisanth074/private_dotfiles.git
-	url = git@github.com:nisanth074/private_dotfiles.git

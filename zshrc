@@ -138,7 +138,6 @@ setopt extendedglob
 # unalias gpu
 source $ZSH_HOME/prompt.sh
 source $ZSH_HOME/aliases.sh
-source $DOTFILES/private_dotfiles/zsh/aliases.sh
 source $ZSH_HOME/tools.sh
 
 # http://unix.stackexchange.com/questions/6620/how-to-edit-command-line-in-full-screen-editor-in-zsh
