@@ -4,5 +4,5 @@ revert_migration () {
   migration_version=$1
   bundle exec rake db:migrate:down VERSION=$migration_version
   # migration_version_or_name=$1
-  # rvm default do ruby ~/.dotfiles/scripts/revert_migration.rb $migration_version_or_name
+  # ruby ~/.dotfiles/scripts/revert_migration.rb $migration_version_or_name
 }

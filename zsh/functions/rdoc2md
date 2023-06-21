@@ -1,3 +1,3 @@
 rdoc2md () {
-  rvm default do ruby ~/bin/rdoc2md.rb
+  ruby ~/bin/rdoc2md.rb
 }

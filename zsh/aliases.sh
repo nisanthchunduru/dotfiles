@@ -54,7 +54,6 @@ alias t=tmux
 alias ta='tmux attach'
 
 # Invoker
-# alias invoker='NOEXEC_DISABLE=1 rvm default do invoker'
 alias i=invoker
 alias is=invoker start invoker.ini
 
@@ -64,9 +63,6 @@ alias dc='docker-compose'
 alias dcb='docker-compose build'
 alias dcup='docker-compose up'
 alias dcupd='docker-compose up -d'
-
-# RVM
-alias rerun='NOEXEC_DISABLE=1 rvm default do rerun'
 
 # Bundler
 alias b=bundle
@@ -125,5 +121,5 @@ alias tfa='terraform apply'
 # Heroku
 alias h='heroku'
 
-alias strip_image_metadata="rvm default do ruby ~/repos/dotfiles/scripts/strip_image_metadata.rb"
-alias heic_to_jpg="rvm default do ruby ~/repos/dotfiles/scripts/heic_to_jpg.rb"
+alias strip_image_metadata="ruby ~/repos/dotfiles/scripts/strip_image_metadata.rb"
+alias heic_to_jpg="ruby ~/repos/dotfiles/scripts/heic_to_jpg.rb"

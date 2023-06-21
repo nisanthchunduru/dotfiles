@@ -2,5 +2,5 @@
 #   migration_version AddWhitelistedToUsers
 migration_version () {
   migration_name=$1
-  rvm default do ruby ~/.dotfiles/scripts/migration_version.rb $migration_name
+  ruby ~/.dotfiles/scripts/migration_version.rb $migration_name
 }
