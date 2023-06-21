@@ -1,6 +1,6 @@
 # dotfiles
 
-My dotfiles
+My handy dotfiles
 
 ## Installation
 
