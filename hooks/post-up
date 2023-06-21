@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# Configure OS X
+# Configure MacOS
 #
 
 touch ~/.hushlogin
@@ -26,31 +26,26 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 git config --global core.editor
 
-# Install homebrew
-if [ ! -d "/opt/homebrew" ]; then
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-fi
+# # Install homebrew
+# if [ ! -d "/opt/homebrew" ]; then
+#   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# fi
 # Install x86 homebrew
 if [ ! -d "/usr/local/Cellar" ]; then
   arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-#
-# Setup zsh
-#
-
 # Set zsh as the default shell
 chsh -s /bin/zsh
+# # Install Oh My Zsh
+# git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+# # Install zsh yarn completions plugin
+# git clone https://github.com/chrisands/zsh-yarn-completions ~/.oh-my-zsh/custom/plugins/zsh-yarn-completions
+# Install powerlevel10k zsh theme
+brew tap "romkatv/powerlevel10k"
+brew install "powerlevel10k"
 
-# Install Oh My Zsh
-git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-# Install zsh yarn completions plugin
-git clone https://github.com/chrisands/zsh-yarn-completions ~/.oh-my-zsh/custom/plugins/zsh-yarn-completions
-
-#
 # Install vim plugins
-#
-
 # Borrowed from https://robots.thoughtbot.com/rcm-for-rc-files-in-dotfiles-repos
 if [ -e $HOME/.vim/bundle/Vundle.vim ]; then
   pushd $HOME/.vim/bundle/Vundle.vim
@@ -61,19 +56,8 @@ else
 fi
 vim +PluginInstall +qall
 
-#
-# Install RVM
-#
-
-brew install gpg
-gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-\curl -sSL https://get.rvm.io | bash -s stable
-
-# Install Node LTS
-brew install node@16
-brew link node@16
-
 # Install Qwandry
 # gem install qwandry
 
+# Install software
 brew bundle --file=~/repos/dotfiles/Brewfile
