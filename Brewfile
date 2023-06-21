@@ -13,7 +13,8 @@ brew "hub"
 brew "tree"
 brew "mas"
 brew "zsh"
-brew "romkatv/powerlevel10k/powerlevel10k"
+tap "romkatv/powerlevel10k"
+brew "powerlevel10k"
 brew "zplug"
 brew "git"
 brew "z"
@@ -21,26 +22,10 @@ brew "imagemagick"
 brew "gpg"
 brew "vim"
 brew "httpie"
-# Install ThoughtBot's rc dotfile manager
-tap "thoughtbot/formulae"
-brew "rcm"
-# Install PostgreSQL 9.1
-# tap "petere/homebrew-postgresql"
-# brew "postgresql-9.1"
-# Install Redis 2.4
-# tap "nisanth074/SupportBee-homebrew-tap", "https://gitlab.com/nisanth074/SupportBee-homebrew-tap"
-# brew "redis24"
-brew "memcached"
-brew "tnef"
-brew "geckodriver"
-brew "chromedriver"
-brew "libxml2"
-brew "icu4c"
 brew "graphviz"
 brew "dos2unix"
 brew "coreutils" # Install coreutils for the realpath command
 brew "mackup"
-brew "rcm"
 brew "readline"
 brew "colordiff"
 brew "wifi-password"
@@ -51,7 +36,6 @@ brew "htop"
 brew "visual-studio-code"
 brew "awscli"
 brew "session-manager"
-brew "cloudflared"
 brew "tmux"
 
 # mas "MenuTab for Facebook", id: 421358730
@@ -69,7 +53,7 @@ mas "Antetype Viewer", id: 824152298
 mas "Wallcat", id: 1000397973
 # mas "Polymail", id: 1134717305
 # mas "Newton", id: 1059655371
-mas "App Cleaner", id: 1013897218
+# mas "App Cleaner", id: 1013897218
 mas "Simplenote", id: 692867256
 # mas "Authy"
 mas "Telegram", id: 747648890
@@ -109,4 +93,4 @@ cask "font-ubuntu"
 # cask "font-fira-mono"
 cask "font-ubuntu-mono"
 
-mas "Xcode", id: 497799835
+# mas "Xcode", id: 497799835
