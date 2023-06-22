@@ -42,11 +42,6 @@ autoload edit-command-line
 zle -N edit-command-line
 # bindkey -M vicmd v edit-command-line
 
-# # Borrowed from https://stackoverflow.com/questions/68351594/rvm-install-ruby-2-6-4-fails-with-makefile-error-implicit-declaration-of-functi
-# export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"
-# export CPPFLAGS="-I/opt/homebrew/opt/libffi/include"
-# export PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig"
-
 export PATH="./node_modules/.bin:$PATH"
 
 # Add my functions to fpath
