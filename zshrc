@@ -85,3 +85,5 @@ source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source ~/.p10k.zsh
 # typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
