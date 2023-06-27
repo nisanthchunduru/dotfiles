@@ -48,6 +48,7 @@ alias grm='git rm'
 alias git_discard_changes='git checkout --'
 # Borrowed from https://www.damirscorner.com/blog/posts/20210423-ChangingUrlsOfGitSubmodules.html
 alias git_clone_submodules='git submodule update --init --recursive --remote'
+alias add_gitignore_local='ln -s .git/info/exclude .gitignore_local'
 
 # Tmux
 alias t=tmux
