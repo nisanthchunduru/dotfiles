@@ -86,6 +86,7 @@ alias print_native_gems="bundle exec ruby -e 'puts Gem.loaded_specs.values.selec
 
 # RSpec
 alias r='bundle exec rspec'
+alias rd='bundle exec rspec --format documentation'
 alias sr='bundle exec spring rspec'
 alias s='bundle exec spring'
 alias ss='bundle exec spring stop'
