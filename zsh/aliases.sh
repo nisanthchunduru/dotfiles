@@ -125,3 +125,6 @@ alias h='heroku'
 
 alias strip_image_metadata="ruby ~/repos/dotfiles/scripts/strip_image_metadata.rb"
 alias heic_to_jpg="ruby ~/repos/dotfiles/scripts/heic_to_jpg.rb"
+
+# Alias to restore default route after connecting to a AWS VPN
+alias restore_default_route="sudo route delete -net default && sudo route -n add -net default 192.168.1.1"
