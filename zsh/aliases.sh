@@ -7,9 +7,9 @@ alias diff=colordiff
 alias cask='brew cask'
 alias pub='cat ~/.ssh/id_rsa.pub | tee >(pbcopy)' # Print ssh public key
 alias sub='subdb d'
-alias strip_location_information="ruby ~/repos/dotfiles/scripts/strip_location_information.rb"
 alias intel='arch -x86_64'
 alias x=exit
+alias ac='ruby ~/repos/dotfiles/scripts/samsung_ac.rb'
 
 # Homebrew
 alias bb='brew bundle --global'
@@ -125,7 +125,9 @@ alias tfa='terraform apply'
 # Heroku
 alias h='heroku'
 
+# Image manipulation
 alias strip_image_metadata="ruby ~/repos/dotfiles/scripts/strip_image_metadata.rb"
+alias strip_location_information="ruby ~/repos/dotfiles/scripts/strip_location_information.rb"
 alias heic_to_jpg="ruby ~/repos/dotfiles/scripts/heic_to_jpg.rb"
 
 # Alias to restore default route after connecting to a AWS VPN
