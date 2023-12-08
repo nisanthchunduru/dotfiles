@@ -5,6 +5,13 @@
 #
 # @see https://robots.thoughtbot.com/brewfile-a-gemfile-but-for-homebrew More details
 
+# Fonts
+tap "caskroom/fonts"
+cask "font-ubuntu"
+# cask "font-hack"
+# cask "font-fira-mono"
+cask "font-ubuntu-mono"
+
 brew "wget"
 brew "curl"
 brew "the_silver_searcher"
@@ -82,12 +89,5 @@ cask "scroll-reverser"
 cask "webtorrent"
 cask "meld"
 cask "whatsapp"
-
-# Fonts
-tap "caskroom/fonts"
-cask "font-ubuntu"
-# cask "font-hack"
-# cask "font-fira-mono"
-cask "font-ubuntu-mono"
 
 # mas "Xcode", id: 497799835
