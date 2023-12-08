@@ -5,7 +5,6 @@
 #
 # @see https://robots.thoughtbot.com/brewfile-a-gemfile-but-for-homebrew More details
 
-brew "aria2"
 brew "wget"
 brew "curl"
 brew "the_silver_searcher"
