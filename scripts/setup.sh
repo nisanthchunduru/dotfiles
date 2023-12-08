@@ -22,6 +22,10 @@ mkdir -p ~/repos
 git clone git@github.com:nisanthchunduru/dotfiles.git ~/repos/dotfiles
 echo "Cloned dotfiles repo."
 
+echo "Install vundle..."
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+echo Installed vundle"
+
 echo "Installing rcm..."
 brew tap thoughtbot/formulae
 brew install rcm
