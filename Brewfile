@@ -6,7 +6,7 @@
 # @see https://robots.thoughtbot.com/brewfile-a-gemfile-but-for-homebrew More details
 
 # Fonts
-tap "caskroom/fonts"
+tap "homebrew/cask-fonts"
 cask "font-ubuntu"
 # cask "font-hack"
 # cask "font-fira-mono"
