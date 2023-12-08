@@ -5,6 +5,14 @@ if ! command -v brew &> /dev/null; then
   echo "Installed homebrew."
 fi
 
+echo "Installing asdf..."
+brew install asdf
+echo "Installed asdf"
+
+echo "Installing z..."
+brew install z
+echo "Installed z"
+
 echo "Cloning dotfiles repo..."
 mkdir -p ~/repos
 git clone git@github.com:nisanthchunduru/dotfiles.git ~/repos/dotfiles
