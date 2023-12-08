@@ -13,6 +13,10 @@ echo "Installing z..."
 brew install z
 echo "Installed z"
 
+echo "Installing powerlevel10k..."
+brew install powerlevel10k
+echo "Installed powerlevel10k"
+
 echo "Cloning dotfiles repo..."
 mkdir -p ~/repos
 git clone git@github.com:nisanthchunduru/dotfiles.git ~/repos/dotfiles
