@@ -64,7 +64,6 @@ mas "Telegram", id: 747648890
 
 cask "google-chrome"
 # tap "caskroom/homebrew-versions"
-cask "google-chrome-canary"
 cask "vlc"
 cask "iterm2"
 # cask "popcorn-time"
