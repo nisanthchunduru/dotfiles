@@ -9,6 +9,18 @@ echo "Installing asdf..."
 brew install asdf
 echo "Installed asdf"
 
+echo "Installing asdf nodejs plugin..."
+asdf plugin add nodejs
+echo "Installed asdf nodejs plugin"
+
+echo "Installing asdf python plugin..."
+asdf plugin add python
+echo "Installed asdf python plugin"
+
+echo "Installing asdf ruby plugin..."
+asdf plugin add ruby
+echo "Installed asdf ruby plugin"
+
 echo "Installing z..."
 brew install z
 echo "Installed z"
