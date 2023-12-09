@@ -79,9 +79,6 @@ cask "firefox"
 # cask "authy"
 # cask "atom", { args: { appdir: "/Applications" } }
 # tap "caskroom/versions"
-# cask "java7" # Required for elasticsearch
-# cask "java8" # Required for logstash
-# brew "logstash"
 # cask "cumulus"
 cask "google-drive"
 cask "scroll-reverser"
