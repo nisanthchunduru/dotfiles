@@ -16,6 +16,7 @@ brew "visual-studio-code"
 mas "Simplenote", id: 692867256
 mas "Telegram", id: 747648890
 mas "WhatsApp", id: 310633997
+brew "orbstack"
 
 brew "wget"
 brew "curl"
