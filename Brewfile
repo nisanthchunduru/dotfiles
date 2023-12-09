@@ -12,6 +12,11 @@ cask "font-ubuntu"
 # cask "font-fira-mono"
 cask "font-ubuntu-mono"
 
+brew "visual-studio-code"
+mas "Simplenote", id: 692867256
+mas "Telegram", id: 747648890
+mas "WhatsApp", id: 310633997
+
 brew "wget"
 brew "curl"
 brew "the_silver_searcher"
@@ -37,9 +42,7 @@ brew "wifi-password"
 # brew "sshfs"
 brew "ghostscript" # Required for https://github.com/jakepetroules/littlebirdy
 brew "htop"
-brew "visual-studio-code"
 brew "awscli"
-brew "session-manager"
 brew "tmux"
 
 # mas "MenuTab for Facebook", id: 421358730
@@ -51,16 +54,13 @@ mas "Skitch", id: 425955336
 # mas "Wunderlist", id: 410628904
 # mas "Unibox", id: 702816521
 mas "Slack", id: 803453959
-mas "Antetype Viewer", id: 824152298
 # mas "HazeOver", id: 430798174
 # mas "Dash", id: 458034879
 mas "Wallcat", id: 1000397973
 # mas "Polymail", id: 1134717305
 # mas "Newton", id: 1059655371
 # mas "App Cleaner", id: 1013897218
-mas "Simplenote", id: 692867256
 # mas "Authy"
-mas "Telegram", id: 747648890
 
 cask "google-chrome"
 # tap "caskroom/homebrew-versions"
@@ -87,6 +87,5 @@ cask "google-drive"
 cask "scroll-reverser"
 cask "webtorrent"
 cask "meld"
-cask "whatsapp"
 
 # mas "Xcode", id: 497799835
