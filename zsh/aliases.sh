@@ -62,10 +62,10 @@ alias is=invoker start invoker.ini
 
 # Docker
 alias d='docker'
-alias dc='docker-compose'
-alias dcb='docker-compose build'
-alias dcup='docker-compose up'
-alias dcupd='docker-compose up -d'
+alias dc='docker compose'
+alias dcb='docker compose build'
+alias dcup='docker compose up'
+alias dcupd='docker compose up -d'
 
 # Bundler
 alias b=bundle
