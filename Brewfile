@@ -18,6 +18,7 @@ mas "Telegram", id: 747648890
 mas "WhatsApp", id: 310633997
 brew "orbstack"
 
+brew "tableplus"
 brew "wget"
 brew "curl"
 brew "the_silver_searcher"
