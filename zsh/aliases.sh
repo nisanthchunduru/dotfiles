@@ -11,6 +11,11 @@ alias intel='arch -x86_64'
 alias x=exit
 alias ac='ruby ~/repos/dotfiles/scripts/samsung_ac.rb'
 
+# Image manipulation
+alias strip_image_metadata="ruby ~/repos/dotfiles/scripts/strip_image_metadata.rb"
+alias strip_location_information="ruby ~/repos/dotfiles/scripts/strip_location_information.rb"
+alias heic_to_jpg="ruby ~/repos/dotfiles/scripts/heic_to_jpg.rb"
+
 # Homebrew
 alias bb='brew bundle --global'
 alias ibrew='arch -x86_64 /usr/local/bin/brew'
@@ -22,6 +27,7 @@ alias sourcetree='open -a SourceTree'
 alias macdown='open -a MacDown'
 alias st=sourcetree .
 alias typora='open -a Typora'
+alias cr='cursor'
 
 # DNS
 alias use_google_dns='networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4'
@@ -124,8 +130,3 @@ alias tfa='terraform apply'
 
 # Heroku
 alias h='heroku'
-
-# Image manipulation
-alias strip_image_metadata="ruby ~/repos/dotfiles/scripts/strip_image_metadata.rb"
-alias strip_location_information="ruby ~/repos/dotfiles/scripts/strip_location_information.rb"
-alias heic_to_jpg="ruby ~/repos/dotfiles/scripts/heic_to_jpg.rb"
