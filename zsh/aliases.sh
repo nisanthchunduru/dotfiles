@@ -10,6 +10,7 @@ alias sub='subdb d'
 alias intel='arch -x86_64'
 alias x=exit
 alias ac='ruby ~/repos/dotfiles/scripts/samsung_ac.rb'
+alias http_server='python3 -m http.server'
 
 # Image manipulation
 alias strip_image_metadata="ruby ~/repos/dotfiles/scripts/strip_image_metadata.rb"
