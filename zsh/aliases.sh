@@ -10,6 +10,12 @@ alias sub='subdb d'
 alias intel='arch -x86_64'
 alias x=exit
 alias ac='ruby ~/repos/dotfiles/scripts/samsung_ac.rb'
+alias http_server='python3 -m http.server'
+
+# Image manipulation
+alias strip_image_metadata="ruby ~/repos/dotfiles/scripts/strip_image_metadata.rb"
+alias strip_location_information="ruby ~/repos/dotfiles/scripts/strip_location_information.rb"
+alias heic_to_jpg="ruby ~/repos/dotfiles/scripts/heic_to_jpg.rb"
 
 # Homebrew
 alias bb='brew bundle --global'
@@ -22,6 +28,7 @@ alias sourcetree='open -a SourceTree'
 alias macdown='open -a MacDown'
 alias st=sourcetree .
 alias typora='open -a Typora'
+alias cr='cursor'
 
 # DNS
 alias use_google_dns='networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4'
@@ -62,10 +69,10 @@ alias is=invoker start invoker.ini
 
 # Docker
 alias d='docker'
-alias dc='docker-compose'
-alias dcb='docker-compose build'
-alias dcup='docker-compose up'
-alias dcupd='docker-compose up -d'
+alias dc='docker compose'
+alias dcb='docker compose build'
+alias dcup='docker compose up'
+alias dcupd='docker compose up -d'
 
 # Bundler
 alias b=bundle
@@ -124,11 +131,3 @@ alias tfa='terraform apply'
 
 # Heroku
 alias h='heroku'
-
-# Image manipulation
-alias strip_image_metadata="ruby ~/repos/dotfiles/scripts/strip_image_metadata.rb"
-alias strip_location_information="ruby ~/repos/dotfiles/scripts/strip_location_information.rb"
-alias heic_to_jpg="ruby ~/repos/dotfiles/scripts/heic_to_jpg.rb"
-
-# Alias to restore default route after connecting to a AWS VPN
-alias restore_default_route="sudo route delete -net default && sudo route -n add -net default 192.168.1.1"

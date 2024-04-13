@@ -5,10 +5,38 @@ if ! command -v brew &> /dev/null; then
   echo "Installed homebrew."
 fi
 
+echo "Installing asdf..."
+brew install asdf
+echo "Installed asdf"
+
+echo "Installing asdf nodejs plugin..."
+asdf plugin add nodejs
+echo "Installed asdf nodejs plugin"
+
+echo "Installing asdf python plugin..."
+asdf plugin add python
+echo "Installed asdf python plugin"
+
+echo "Installing asdf ruby plugin..."
+asdf plugin add ruby
+echo "Installed asdf ruby plugin"
+
+echo "Installing z..."
+brew install z
+echo "Installed z"
+
+echo "Installing powerlevel10k..."
+brew install powerlevel10k
+echo "Installed powerlevel10k"
+
 echo "Cloning dotfiles repo..."
 mkdir -p ~/repos
 git clone git@github.com:nisanthchunduru/dotfiles.git ~/repos/dotfiles
 echo "Cloned dotfiles repo."
+
+echo "Install vundle..."
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+echo Installed vundle"
 
 echo "Installing rcm..."
 brew tap thoughtbot/formulae
