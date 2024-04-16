@@ -74,6 +74,10 @@ alias dcb='docker compose build'
 alias dcup='docker compose up'
 alias dcupd='docker compose up -d'
 
+# Ruby
+alias gem_build='~/repos/dotfiles/scripts/gem_build'
+alias gem_publish='~/repos/dotfiles/scripts/gem_publish'
+
 # Bundler
 alias b=bundle
 alias be='bundle exec'

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -e
+
+if ls *.gem 1> /dev/null 2>&1; then
+  rm *.gem
+fi
+gemspec_file=$(ls *.gemspec)
+gem_name=$(basename "${gemspec_file}" '.gemspec')
+echo "Building gem..."
+gem build ${gemspec_file}
+echo "Gem built"
