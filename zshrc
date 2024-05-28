@@ -82,4 +82,11 @@ source $(brew --prefix)/opt/powerlevel10k/share/powerlevel10k/powerlevel10k.zsh-
 source ~/.p10k.zsh
 # typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+if [ -f "/opt/homebrew/opt/asdf/libexec/asdf.sh" ]; then
+  . /opt/homebrew/opt/asdf/libexec/asdf.sh
+fi
+
+if type mise &>/dev/null; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+  eval "$(mise activate zsh)"
+fi
