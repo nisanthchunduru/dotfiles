@@ -28,7 +28,7 @@ alias sourcetree='open -a SourceTree'
 alias macdown='open -a MacDown'
 alias st=sourcetree .
 alias typora='open -a Typora'
-alias cr='cursor'
+alias c='cursor'
 
 # DNS
 alias use_google_dns='networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4'
@@ -114,9 +114,6 @@ alias ju="jest -u"
 
 # Storybook
 alias sb="npm run storybook"
-
-# Cucumber
-alias c='bundle exec cucumber'
 
 # Ansible
 # alias an=ansible
