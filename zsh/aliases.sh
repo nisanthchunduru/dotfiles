@@ -18,7 +18,7 @@ alias strip_location_information="ruby ~/repos/dotfiles/scripts/strip_location_i
 alias heic_to_jpg="ruby ~/repos/dotfiles/scripts/heic_to_jpg.rb"
 
 # Homebrew
-alias bb='brew bundle --global'
+alias brb='brew bundle --global'
 alias ibrew='arch -x86_64 /usr/local/bin/brew'
 alias bri='brew install'
 alias brs='brew search'
