@@ -28,7 +28,9 @@ alias sourcetree='open -a SourceTree'
 alias macdown='open -a MacDown'
 alias st=sourcetree .
 alias typora='open -a Typora'
-alias c='cursor'
+alias cu='cursor'
+alias co='code'
+alias ws='webstorm'
 
 # DNS
 alias use_google_dns='networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4'
