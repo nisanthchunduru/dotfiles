@@ -1,0 +1,10 @@
+gpuff () {
+	if [ $# -eq 0 ]; then
+        current_git_branch=`git rev-parse --abbrev-ref HEAD`
+		git push -d origin $current_git_branch
+        git push origin $current_git_branch
+	else
+        git push -d $@
+        git push $@
+	fi
+}
