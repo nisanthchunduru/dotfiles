@@ -102,3 +102,6 @@ fi
 if [ -f "${ZSH_HOME}/private_aliases.sh" ]; then
   source "${ZSH_HOME}/private_aliases.sh"
 fi
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/chunisan/.cache/lm-studio/bin"
