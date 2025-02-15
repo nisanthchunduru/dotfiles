@@ -24,13 +24,14 @@ alias bri='brew install'
 alias brs='brew search'
 
 # Applications
-alias sourcetree='open -a SourceTree'
-alias macdown='open -a MacDown'
-alias st=sourcetree .
-alias typora='open -a Typora'
-alias cu='cursor'
 alias co='code'
-alias ws='webstorm'
+alias cu='cursor'
+alias ws='windsurf'
+alias wst='webstorm'
+alias sourcetree='open -a SourceTree'
+alias st=sourcetree .
+alias macdown='open -a MacDown'
+alias typora='open -a Typora'
 
 # DNS
 alias use_google_dns='networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4'
