@@ -42,6 +42,7 @@ alias use_local_dns='networksetup -setdnsservers Wi-Fi 127.0.0.1'
 # Git
 alias g=git
 alias gs='git status'
+alias gra='git remote add'
 alias gcl='git clone'
 alias gb='git branch --sort=-creatordate'
 alias gbd='git branch -d'
