@@ -55,6 +55,7 @@ alias gl='git log'
 alias gcp='git cherry-pick'
 alias gri='git rebase -i'
 alias gf='git fetch'
+alias gfa='git fetch --all'
 alias grm='git rm'
 alias git_discard_changes='git checkout --'
 # Borrowed from https://www.damirscorner.com/blog/posts/20210423-ChangingUrlsOfGitSubmodules.html
