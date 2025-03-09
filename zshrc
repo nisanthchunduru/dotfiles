@@ -100,3 +100,6 @@ fi
 if [ -f "${ZSH_HOME}/private_aliases.sh" ]; then
   source "${ZSH_HOME}/private_aliases.sh"
 fi
+
+# Added by Windsurf
+export PATH="/Users/nisanth/.codeium/windsurf/bin:$PATH"
