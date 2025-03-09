@@ -8,11 +8,13 @@ touch ~/.hushlogin
 
 # Use Google DNS
 networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4
+# Change Dock icon size
+defaults write com.apple.dock tilesize -int 48; killall Dock
 # Stop iTunes from launching when the Play/Pause button is pressed
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 # Disable OS X spelling correction
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
-# Reduce use of transparency in OS X
+# Reduce use of transparency
 # defaults write com.apple.universalaccess reduceTransparency -bool true
 # Hide all desktop icons
 defaults write com.apple.finder CreateDesktop -bool false
