@@ -5,21 +5,10 @@ if ! command -v brew &> /dev/null; then
   echo "Installed homebrew."
 fi
 
-echo "Installing asdf..."
-brew install asdf
-echo "Installed asdf"
-
-echo "Installing asdf nodejs plugin..."
-asdf plugin add nodejs
-echo "Installed asdf nodejs plugin"
-
-echo "Installing asdf python plugin..."
-asdf plugin add python
-echo "Installed asdf python plugin"
-
-echo "Installing asdf ruby plugin..."
-asdf plugin add ruby
-echo "Installed asdf ruby plugin"
+echo "Installing mise..."
+# curl https://mise.run | sh
+eval "$(curl https://mise.run)"
+echo "Installed mise"
 
 echo "Installing z..."
 brew install z
