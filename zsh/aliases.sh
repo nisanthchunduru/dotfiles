@@ -12,18 +12,8 @@ alias x=exit
 alias ac='ruby ~/repos/dotfiles/scripts/samsung_ac.rb'
 alias http_server='python3 -m http.server'
 
-# Image manipulation
-alias strip_image_metadata="ruby ~/repos/dotfiles/scripts/strip_image_metadata.rb"
-alias strip_location_information="ruby ~/repos/dotfiles/scripts/strip_location_information.rb"
-alias heic_to_jpg="ruby ~/repos/dotfiles/scripts/heic_to_jpg.rb"
-
-# Homebrew
-alias brb='brew bundle --global'
-alias ibrew='arch -x86_64 /usr/local/bin/brew'
-alias bri='brew install'
-alias brs='brew search'
-
 # Applications
+alias e='windsurf'
 alias co='code'
 alias cu='cursor'
 alias ws='windsurf'
@@ -31,6 +21,17 @@ alias sourcetree='open -a SourceTree'
 alias st=sourcetree .
 alias macdown='open -a MacDown'
 alias typora='open -a Typora'
+
+# Homebrew
+alias brb='brew bundle --global'
+alias ibrew='arch -x86_64 /usr/local/bin/brew'
+alias bri='brew install'
+alias brs='brew search'
+
+# Image manipulation
+alias strip_image_metadata="ruby ~/repos/dotfiles/scripts/strip_image_metadata.rb"
+alias strip_location_information="ruby ~/repos/dotfiles/scripts/strip_location_information.rb"
+alias heic_to_jpg="ruby ~/repos/dotfiles/scripts/heic_to_jpg.rb"
 
 # DNS
 alias use_google_dns='networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4'
