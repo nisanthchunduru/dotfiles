@@ -12,23 +12,26 @@ alias x=exit
 alias ac='ruby ~/repos/dotfiles/scripts/samsung_ac.rb'
 alias http_server='python3 -m http.server'
 
-# Image manipulation
-alias strip_image_metadata="ruby ~/repos/dotfiles/scripts/strip_image_metadata.rb"
-alias strip_location_information="ruby ~/repos/dotfiles/scripts/strip_location_information.rb"
-alias heic_to_jpg="ruby ~/repos/dotfiles/scripts/heic_to_jpg.rb"
+# Applications
+alias e='windsurf'
+alias co='code'
+alias cu='cursor'
+alias ws='windsurf'
+alias sourcetree='open -a SourceTree'
+alias st=sourcetree .
+alias macdown='open -a MacDown'
+alias typora='open -a Typora'
 
 # Homebrew
-alias bb='brew bundle --global'
+alias brb='brew bundle --global'
 alias ibrew='arch -x86_64 /usr/local/bin/brew'
 alias bri='brew install'
 alias brs='brew search'
 
-# Applications
-alias sourcetree='open -a SourceTree'
-alias macdown='open -a MacDown'
-alias st=sourcetree .
-alias typora='open -a Typora'
-alias c='cursor'
+# Image manipulation
+alias strip_image_metadata="ruby ~/repos/dotfiles/scripts/strip_image_metadata.rb"
+alias strip_location_information="ruby ~/repos/dotfiles/scripts/strip_location_information.rb"
+alias heic_to_jpg="ruby ~/repos/dotfiles/scripts/heic_to_jpg.rb"
 
 # DNS
 alias use_google_dns='networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4'
@@ -39,6 +42,7 @@ alias use_local_dns='networksetup -setdnsservers Wi-Fi 127.0.0.1'
 # Git
 alias g=git
 alias gs='git status'
+alias gra='git remote add'
 alias gcl='git clone'
 alias gb='git branch --sort=-creatordate'
 alias gbd='git branch -d'
@@ -51,6 +55,7 @@ alias gl='git log'
 alias gcp='git cherry-pick'
 alias gri='git rebase -i'
 alias gf='git fetch'
+alias gfa='git fetch --all'
 alias grm='git rm'
 alias git_discard_changes='git checkout --'
 # Borrowed from https://www.damirscorner.com/blog/posts/20210423-ChangingUrlsOfGitSubmodules.html
@@ -58,6 +63,7 @@ alias git_clone_submodules='git submodule update --init --recursive --remote'
 alias add_gitignore_local='ln -s .git/info/exclude .gitignore_local'
 alias delete_all_branches_except_main='git branch | grep -v 'main' | xargs git branch -D'
 alias delete_all_branches_except_main='git branch | grep -v 'master' | xargs git branch -D'
+alias delete_remote_branch='git push -d origin'
 
 # Tmux
 alias t=tmux
