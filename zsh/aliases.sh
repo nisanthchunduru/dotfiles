@@ -91,7 +91,7 @@ alias bi='bundle install'
 alias bivb='bundle install --path vendor/bundle'
 alias bs='bundle show'
 alias bcd='bundle-cd'
-alias bo='EDITOR=atom bundle open'
+alias bo='bundle open'
 
 # Rails
 alias rs="bundle exec rails server"
