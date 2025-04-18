@@ -13,7 +13,6 @@ alias ac='ruby ~/repos/dotfiles/scripts/samsung_ac.rb'
 alias http_server='python3 -m http.server'
 
 # Applications
-alias e='windsurf'
 alias co='code'
 alias cu='cursor'
 alias ws='windsurf'
