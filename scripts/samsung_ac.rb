@@ -2,7 +2,35 @@
 
 require 'json'
 
-def setup
+# require 'pry'
+
+class AcDevice
+  def initialize(id)
+    @id = id
+  end
+
+  def turn_on
+    `smartthings devices:commands #{@id} 'switch:on'`
+  end
+  
+  def turn_off
+    `smartthings devices:commands #{@id} 'switch:off'`
+  end
+  
+  def turn_on_windfree_mode
+    `smartthings devices:commands #{@id} 'custom.airConditionerOptionalMode:setAcOptionalMode("windFree")'`
+  end
+  
+  def turn_off_windfree_mode
+    `smartthings devices:commands #{@id} 'custom.airConditionerOptionalMode:setAcOptionalMode("off")'`
+  end
+
+  def set_temperature(temperature)
+    `smartthings devices:commands #{@id} 'thermostatCoolingSetpoint:setCoolingSetpoint(#{temperature})'`
+  end
+end
+
+def install_prerequisities
   unless smartthings_cli_installed?
     puts "Installing official SmartThings CLI..."
     `brew install smartthingscommunity/smartthings/smartthings`
@@ -14,37 +42,18 @@ def smartthings_cli_installed?
   !!system("smartthings --version")
 end
 
-def smartthings_device_id
+def action(ac_number, action_name, *args)
+  install_prerequisities
+
   devices_json = `smartthings devices --json`
   devices = JSON.parse(devices_json)
-  first_ac_device = devices.detect { |device| device["ocf"]["ocfDeviceType"] == "oic.d.airconditioner" }
-  unless first_ac_device
-    puts "Sorry, seems like you don't have a Samsung AC"
+  device = devices.sort_by { |device| device["createTime"] }[ac_number - 1]
+  unless device
+    puts "Please provide a valid ac number as the first argument"
     exit(1)
   end
-  first_ac_device["deviceId"]
-end
-
-def action(action_name, *args)
-  setup
-
-  send(action_name, *args)
-end
-
-def turn_on
-  `smartthings devices:commands #{smartthings_device_id} 'switch:on'`
-end
-
-def turn_off
-  `smartthings devices:commands #{smartthings_device_id} 'switch:off'`
-end
-
-def turn_on_windfree_mode
-  `smartthings devices:commands #{smartthings_device_id} 'custom.airConditionerOptionalMode:setAcOptionalMode("windFree")'`
-end
-
-def turn_off_windfree_mode
-  `smartthings devices:commands #{smartthings_device_id} 'custom.airConditionerOptionalMode:setAcOptionalMode("off")'`
+  device = AcDevice.new(device["deviceId"])
+  device.public_send(action_name, *args)
 end
 
 def integer?(value)
@@ -54,31 +63,34 @@ rescue ArgumentError
   false
 end
 
-def set_temperature(temperature)
-  `smartthings devices:commands #{smartthings_device_id} 'thermostatCoolingSetpoint:setCoolingSetpoint(#{temperature})'`
-end
-
 def print_usage
-  puts "Usage: #{File.basename($0)} [on|off|windfree [on|off]]"
+  puts "Usage: #{File.basename($0)} [ac_number] [on|off|windfree [on|off]]"
 end
 
-case ARGV[0]
+if !integer?(ARGV[0])
+  print_usage
+  exit(1)
+end
+ac_number = ARGV[0].to_i
+
+action_name = ARGV[1]
+case action_name
 when "on"
-  action("turn_on")
+  action(ac_number, "turn_on")
 when "off"
-  action("turn_off")
+  action(ac_number, "turn_off")
 when "windfree"
-  case ARGV[1]
+  case action_name
   when "on"
-    action("turn_on_windfree_mode")
+    action(ac_number, "turn_on_windfree_mode")
   when "off"
-    action("turn_off_windfree_mode")
+    action(ac_number, "turn_off_windfree_mode")
   else
     print_usage
   end
 else
-  if integer?(ARGV[0])
-    action("set_temperature", ARGV[0].to_i)
+  if integer?(action_name)
+    action(ac_number, "set_temperature", action_name.to_i)
   else
     print_usage
   end
