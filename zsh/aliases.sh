@@ -56,6 +56,8 @@ alias gri='git rebase -i'
 alias gf='git fetch'
 alias gfa='git fetch --all'
 alias grm='git rm'
+alias gst='git stash'
+alias git_stash_staged='git stash push --staged'
 alias git_discard_changes='git checkout --'
 # Borrowed from https://www.damirscorner.com/blog/posts/20210423-ChangingUrlsOfGitSubmodules.html
 alias git_clone_submodules='git submodule update --init --recursive --remote'
