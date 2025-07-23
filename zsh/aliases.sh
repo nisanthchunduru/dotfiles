@@ -64,7 +64,8 @@ alias git_clone_submodules='git submodule update --init --recursive --remote'
 alias add_gitignore_local='ln -s .git/info/exclude .gitignore_local'
 alias delete_all_branches_except_main='git branch | grep -v 'main' | xargs git branch -D'
 alias delete_all_branches_except_main='git branch | grep -v 'master' | xargs git branch -D'
-alias delete_remote_branch='git push -d origin'
+# alias delete_remote_branch='git push -d origin'
+alias delete_remote_branch='git push -d origin ${1:-$(git symbolic-ref --short HEAD)}'
 
 # Tmux
 alias t=tmux
