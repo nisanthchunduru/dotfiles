@@ -66,6 +66,8 @@ alias delete_all_branches_except_main='git branch | grep -v 'main' | xargs git b
 alias delete_all_branches_except_main='git branch | grep -v 'master' | xargs git branch -D'
 # alias delete_remote_branch='git push -d origin'
 alias delete_remote_branch='git push -d origin ${1:-$(git symbolic-ref --short HEAD)}'
+alias rebase_latest='git pull --rebase origin'
+alias current_branch='git branch --show-current'
 
 # Tmux
 alias t=tmux
