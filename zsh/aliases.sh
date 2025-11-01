@@ -1,7 +1,3 @@
-# Zsh
-alias reload='source ~/.zshrc'
-alias symlink_dotfiles='rcup -d ~/.dotfiles/ -K'
-
 alias l=ls
 alias diff=colordiff
 alias cask='brew cask'
@@ -11,6 +7,16 @@ alias intel='arch -x86_64'
 alias x=exit
 alias ac='ruby ~/repos/dotfiles/scripts/samsung_ac.rb'
 alias http_server='python3 -m http.server'
+
+# Zsh
+alias reload='source ~/.zshrc'
+alias symlink_dotfiles='rcup -d ~/.dotfiles/ -K'
+
+# MacOS
+# alias dark-mode='defaults write -g AppleInterfaceStyle -string "Dark"'
+# alias light-mode='defaults write -g AppleInterfaceStyle -string "Light"'
+alias dark-mode='osascript -e '\''tell app "System Events" to tell appearance preferences to set dark mode to true'\'''
+alias light-mode='osascript -e '\''tell app "System Events" to tell appearance preferences to set dark mode to false'\'''
 
 # Applications
 alias co='code'
