@@ -76,6 +76,16 @@ alias delete_remote_branch='git push -d origin ${1:-$(git symbolic-ref --short H
 alias rebase_latest='git pull --rebase origin'
 alias current_branch='git branch --show-current'
 
+# An alias/function to checkout to the given branch and delete the previous branch
+gbDco() {
+  if [ -z "$1" ]; then
+    echo "Usage: gbDco <branch-name>"
+    return 1
+  fi
+  local previous_branch=$(git branch --show-current)
+  git checkout "$1" && git branch -D "$previous_branch"
+}
+
 # Tmux
 alias t=tmux
 alias ta='tmux attach'
