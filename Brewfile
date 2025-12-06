@@ -13,6 +13,10 @@ cask "font-ubuntu"
 cask "font-ubuntu-mono"
 
 brew "visual-studio-code"
+cask "kiro"
+cask "cursor"
+cask "windsurf"
+cask "antigravity"
 mas "Simplenote", id: 692867256
 mas "Telegram", id: 747648890
 mas "WhatsApp", id: 310633997
