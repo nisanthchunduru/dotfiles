@@ -7,8 +7,15 @@ alias intel='arch -x86_64'
 alias x=exit
 alias ac='ruby ~/repos/dotfiles/scripts/samsung_ac.rb'
 alias http_server='python3 -m http.server'
+alias co='code'
+alias cu='cursor'
+alias ws='windsurf'
+alias sourcetree='open -a SourceTree'
+alias st=sourcetree .
+alias macdown='open -a MacDown'
+alias typora='open -a Typora'
 
-# Zsh
+# ZSH & dotfiles
 alias reload='source ~/.zshrc'
 alias symlink_dotfiles='rcup -d ~/.dotfiles/ -K'
 
@@ -18,14 +25,10 @@ alias symlink_dotfiles='rcup -d ~/.dotfiles/ -K'
 alias dark-mode='osascript -e '\''tell app "System Events" to tell appearance preferences to set dark mode to true'\'' && sed -i "" "s/\"workbench.colorTheme\": \".*\"/\"workbench.colorTheme\": \"GitHub Dark\"/" ~/Library/Application\ Support/Kiro/User/settings.json'
 alias light-mode='osascript -e '\''tell app "System Events" to tell appearance preferences to set dark mode to false'\'' && sed -i "" "s/\"workbench.colorTheme\": \".*\"/\"workbench.colorTheme\": \"GitHub Light\"/" ~/Library/Application\ Support/Kiro/User/settings.json'
 
-# Applications
-alias co='code'
-alias cu='cursor'
-alias ws='windsurf'
-alias sourcetree='open -a SourceTree'
-alias st=sourcetree .
-alias macdown='open -a MacDown'
-alias typora='open -a Typora'
+# VLC
+acestream() {
+  vlc "http://localhost:6878/ace/getstream?id=$1"
+}
 
 # Homebrew
 alias brb='brew bundle --global'
@@ -44,7 +47,7 @@ alias use_cloudflare_dns='networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1'
 alias use_adguard_dns='networksetup -setdnsservers Wi-Fi 176.103.130.130 176.103.130.131'
 alias use_local_dns='networksetup -setdnsservers Wi-Fi 127.0.0.1'
 
-# Git
+# git
 alias g=git
 alias gs='git status'
 alias gra='git remote add'
