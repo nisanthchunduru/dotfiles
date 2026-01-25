@@ -1,5 +1,5 @@
-# Amazon Q pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
+# Kiro CLI pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh"
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 
@@ -112,10 +112,10 @@ export PATH="$PATH:/Users/chunisan/.cache/lm-studio/bin"
 # Added by Windsurf
 export PATH="/Users/chunisan/.codeium/windsurf/bin:$PATH"
 
+# Added by Antigravity
+export PATH="/Users/$HOME/.antigravity/antigravity/bin:$PATH"
+
 [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
 
-# Amazon Q post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
-
-# Added by Antigravity
-export PATH="/Users/nisanth/.antigravity/antigravity/bin:$PATH"
+# Kiro CLI post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh"
