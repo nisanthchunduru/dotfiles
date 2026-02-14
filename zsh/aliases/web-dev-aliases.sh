@@ -1,1 +1,1 @@
-alias http_server='python3 -m http.server'
+alias http-server='python3 -m http.server'

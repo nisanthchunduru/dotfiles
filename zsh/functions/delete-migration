@@ -1,6 +1,6 @@
 # @example
-#   delete_migration 20171114090744
-delete_migration () {
+#   delete-migration 20171114090744
+delete-migration () {
   migration_version=$1
   ruby ~/.dotfiles/scripts/delete_migration.rb $migration_version
 }

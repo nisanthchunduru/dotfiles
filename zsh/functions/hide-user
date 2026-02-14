@@ -1,3 +1,3 @@
-function hide_user () {
+function hide-user () {
   sudo dscl . create /Users/$1 IsHidden 1
 }

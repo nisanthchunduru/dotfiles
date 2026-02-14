@@ -1,6 +1,6 @@
 # @example
-#  reinstall_native_gem charlock_holmes
-reinstall_native_gem () {
+#  reinstall-native-gem charlock_holmes
+reinstall-native-gem () {
   gem_name=$1
   bundle exec gem pristine $gem_name 
   bundle install

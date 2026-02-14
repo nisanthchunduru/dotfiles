@@ -1,1 +1,1 @@
-alias symlink_dotfiles='rcup -d ~/.dotfiles/ -K'
+alias symlink-dotfiles='rcup -d ~/.dotfiles/ -K'

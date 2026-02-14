@@ -1,3 +1,3 @@
-alias strip_image_metadata="ruby ~/repos/dotfiles/scripts/strip_image_metadata.rb"
-alias strip_location_information="ruby ~/repos/dotfiles/scripts/strip_location_information.rb"
-alias heic_to_jpg="ruby ~/repos/dotfiles/scripts/heic_to_jpg.rb"
+alias strip-image-metadata="ruby ~/repos/dotfiles/scripts/strip_image_metadata.rb"
+alias strip-location-information="ruby ~/repos/dotfiles/scripts/strip_location_information.rb"
+alias heic-to-jpg="ruby ~/repos/dotfiles/scripts/heic_to_jpg.rb"
