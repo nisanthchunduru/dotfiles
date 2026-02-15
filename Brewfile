@@ -70,7 +70,6 @@ mas "Wallcat", id: 1000397973
 
 cask "google-chrome"
 cask "logi-options+"
-# tap "caskroom/homebrew-versions"
 cask "vlc"
 cask "iterm2"
 # cask "popcorn-time"
@@ -85,7 +84,6 @@ cask "firefox"
 # cask "lepton"
 # cask "authy"
 # cask "atom", { args: { appdir: "/Applications" } }
-# tap "caskroom/versions"
 # cask "cumulus"
 cask "google-drive"
 cask "scroll-reverser"
