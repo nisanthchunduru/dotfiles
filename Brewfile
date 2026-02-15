@@ -69,6 +69,7 @@ mas "Wallcat", id: 1000397973
 # mas "Authy"
 
 cask "google-chrome"
+cask "logi-options+"
 # tap "caskroom/homebrew-versions"
 cask "vlc"
 cask "iterm2"
