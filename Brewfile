@@ -54,36 +54,27 @@ brew "tmux"
 # mas "MenuTab for Facebook", id: 421358730
 mas "Kindle", id: 405399194
 mas "The Unarchiver", id: 425424353
-# mas "Twitter", id: 409789998
 mas "Skitch", id: 425955336
-# mas "VisualDiff", id: 434097068
-# mas "Wunderlist", id: 410628904
-# mas "Unibox", id: 702816521
 mas "Slack", id: 803453959
-# mas "HazeOver", id: 430798174
 # mas "Dash", id: 458034879
 mas "Wallcat", id: 1000397973
+# mas "HazeOver", id: 430798174
+# mas "Unibox", id: 702816521
 # mas "Polymail", id: 1134717305
 # mas "Newton", id: 1059655371
 # mas "App Cleaner", id: 1013897218
-# mas "Authy"
 
 cask "google-chrome"
 cask "logi-options+"
 cask "vlc"
 cask "iterm2"
-# cask "popcorn-time"
-# cask "sourcetree"
 cask "fork"
 cask "itsycal"
-# cask "skype"
 # cask "dropbox"
 # cask "sublime-text"
 cask "firefox"
 # cask "franz"
 # cask "lepton"
-# cask "authy"
-# cask "atom", { args: { appdir: "/Applications" } }
 # cask "cumulus"
 cask "google-drive"
 cask "scroll-reverser"
