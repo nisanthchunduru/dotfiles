@@ -12,15 +12,15 @@ class AcDevice
   def turn_on
     `smartthings devices:commands #{@id} 'switch:on'`
   end
-  
+
   def turn_off
     `smartthings devices:commands #{@id} 'switch:off'`
   end
-  
+
   def turn_on_windfree_mode
     `smartthings devices:commands #{@id} 'custom.airConditionerOptionalMode:setAcOptionalMode("windFree")'`
   end
-  
+
   def turn_off_windfree_mode
     `smartthings devices:commands #{@id} 'custom.airConditionerOptionalMode:setAcOptionalMode("off")'`
   end
@@ -42,18 +42,17 @@ def smartthings_cli_installed?
   !!system("smartthings --version")
 end
 
-def action(ac_number, action_name, *args)
+def ac_device(ac_number)
   install_prerequisities
 
   devices_json = `smartthings devices --json`
   devices = JSON.parse(devices_json)
-  device = devices.sort_by { |device| device["createTime"] }[ac_number - 1]
-  unless device
+  record = devices.sort_by { |device| device["createTime"] }[ac_number - 1]
+  unless record
     puts "Please provide a valid ac number as the first argument"
     exit(1)
   end
-  device = AcDevice.new(device["deviceId"])
-  device.public_send(action_name, *args)
+  AcDevice.new(record["deviceId"])
 end
 
 def integer?(value)
@@ -73,24 +72,24 @@ if !integer?(ARGV[0])
 end
 ac_number = ARGV[0].to_i
 
-action_name = ARGV[1]
-case action_name
+subcommand = ARGV[1]
+case subcommand
 when "on"
-  action(ac_number, "turn_on")
+  ac_device(ac_number).turn_on
 when "off"
-  action(ac_number, "turn_off")
+  ac_device(ac_number).turn_off
 when "windfree"
   case ARGV[2]
   when "on"
-    action(ac_number, "turn_on_windfree_mode")
+    ac_device(ac_number).turn_on_windfree_mode
   when "off"
-    action(ac_number, "turn_off_windfree_mode")
+    ac_device(ac_number).turn_off_windfree_mode
   else
     print_usage
   end
 else
-  if integer?(action_name)
-    action(ac_number, "set_temperature", action_name.to_i)
+  if integer?(subcommand)
+    ac_device(ac_number).set_temperature(subcommand.to_i)
   else
     print_usage
   end
