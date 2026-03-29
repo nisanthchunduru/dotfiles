@@ -80,7 +80,7 @@ when "on"
 when "off"
   action(ac_number, "turn_off")
 when "windfree"
-  case action_name
+  case ARGV[2]
   when "on"
     action(ac_number, "turn_on_windfree_mode")
   when "off"
