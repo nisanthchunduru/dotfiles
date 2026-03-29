@@ -111,6 +111,9 @@ export PATH="/Users/chunisan/.codeium/windsurf/bin:$PATH"
 # Added by Antigravity
 export PATH="/Users/$HOME/.antigravity/antigravity/bin:$PATH"
 
+# Add ~/.local/bin to PATH for cursor-agent
+export PATH="$HOME/.local/bin:$PATH"
+
 [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
 
 [[ -f "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
