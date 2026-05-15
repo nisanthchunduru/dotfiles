@@ -91,6 +91,8 @@ if [ -f "/opt/homebrew/opt/asdf/libexec/asdf.sh" ]; then
   . /opt/homebrew/opt/asdf/libexec/asdf.sh
 fi
 
+. "$HOME/.cargo/env"
+
 if [ -d "/opt/homebrew/opt/nvm" ]; then
   export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
