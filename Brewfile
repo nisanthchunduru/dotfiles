@@ -34,6 +34,7 @@ brew "ghostscript" # Required for https://github.com/jakepetroules/littlebirdy
 brew "htop"
 brew "awscli"
 brew "tmux"
+brew "tpm"
 mas "WhatsApp", id: 310633997
 mas "Telegram", id: 747648890
 mas "Simplenote", id: 692867256
