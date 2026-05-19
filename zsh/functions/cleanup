@@ -1,0 +1,10 @@
+cleanup () {
+    set -x
+    brew cleanup
+    docker system prune -f
+    { set +x; } 2>/dev/null
+
+    if typeset -f cleanup_local > /dev/null; then
+        cleanup_local
+    fi
+}
