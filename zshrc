@@ -104,8 +104,7 @@ if type mise &>/dev/null; then
   eval "$(mise activate zsh)"
 fi
 
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/chunisan/.cache/lm-studio/bin"
+export PATH="/Users/chunisan/.bun/bin:$PATH"
 
 # Added by Windsurf
 export PATH="/Users/chunisan/.codeium/windsurf/bin:$PATH"
@@ -119,7 +118,10 @@ export PATH="$HOME/.local/bin:$PATH"
 # Added by Antigravity
 export PATH="/Users/chunisan/.antigravity/antigravity/bin:$PATH"
 
-[[ -f "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/chunisan/.cache/lm-studio/bin"
+
+[[ -f "${0:A:h}/local/zshrc.local" ]] && source "${0:A:h}/local/zshrc.local"
 
 [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
 
