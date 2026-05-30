@@ -35,6 +35,9 @@ brew "htop"
 brew "awscli"
 brew "tmux"
 brew "tpm"
+brew "mosh"
+brew "MisterTea/et/et"
+brew "autossh"
 mas "WhatsApp", id: 310633997
 mas "Telegram", id: 747648890
 mas "Simplenote", id: 692867256
@@ -44,7 +47,6 @@ mas "Skitch", id: 425955336
 mas "Slack", id: 803453959
 # mas "Xcode", id: 497799835
 # mas "Dash", id: 458034879
-mas "Wallcat", id: 1000397973
 # mas "HazeOver", id: 430798174
 # mas "Unibox", id: 702816521
 # mas "Polymail", id: 1134717305
