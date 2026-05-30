@@ -121,7 +121,7 @@ export PATH="/Users/chunisan/.antigravity/antigravity/bin:$PATH"
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/chunisan/.cache/lm-studio/bin"
 
-[[ -f "${0:A:h}/local/zshrc.local" ]] && source "${0:A:h}/local/zshrc.local"
+[[ -f "$DOTFILES/local/zshrc.local" ]] && source "$DOTFILES/local/zshrc.local"
 
 [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
 
