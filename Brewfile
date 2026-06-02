@@ -38,6 +38,7 @@ brew "tpm"
 brew "mosh"
 brew "MisterTea/et/et"
 brew "autossh"
+brew "trzsz-ssh"
 mas "WhatsApp", id: 310633997
 mas "Telegram", id: 747648890
 mas "Simplenote", id: 692867256
