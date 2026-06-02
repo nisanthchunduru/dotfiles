@@ -1,4 +1,5 @@
 alias bedrock-models-ids='aws bedrock list-foundation-models --query "modelSummaries[].modelId" --region us-east-1 --output text | tr "\t" "\n"'
+alias region-bedrock-models-ids='aws bedrock list-foundation-models --query "modelSummaries[].modelId" --output text | tr "\t" "\n"'
 
 bedrock-model-inference-profile-arn() {
   local MODEL_ID="$1"
