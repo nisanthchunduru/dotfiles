@@ -25,7 +25,9 @@ alias add-gitignore-local='ln -s .git/info/exclude .gitignore_local'
 alias delete-all-branches-except-main='git branch | grep -v 'main' | xargs git branch -D'
 alias delete-all-branches-except-master='git branch | grep -v 'master' | xargs git branch -D'
 # alias delete_remote_branch='git push -d origin'
-alias delete-remote-branch='git push -d origin ${1:-$(git symbolic-ref --short HEAD)}'
+delete-remote-branch() {
+  git push -d origin "${1:-$(git symbolic-ref --short HEAD)}"
+}
 alias rebase-latest='git pull --rebase origin'
 alias current-branch='git branch --show-current'
 
