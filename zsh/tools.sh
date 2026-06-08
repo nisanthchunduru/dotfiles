@@ -1,6 +1,8 @@
 # autoload -Uz compinit && compinit
 # . ~/builds/z/z.sh
-. `brew --prefix`/etc/profile.d/z.sh
+if [ -f /opt/homebrew/etc/profile.d/z.sh ]; then
+  . /opt/homebrew/etc/profile.d/z.sh
+fi
 
 # export PATH=./node_modules/.bin:$PATH
 

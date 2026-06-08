@@ -1,14 +1,12 @@
-# Kiro CLI pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh"
+# Kiro CLI integration only needs to load inside Kiro.
+[[ "$TERM_PROGRAM" == "kiro" && -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh"
 
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
-
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# Powerlevel10k is temporarily disabled in favor of zsh/prompt.sh.
+# typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
+#
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
 
 export DOTFILES=~/repos/dotfiles
 
@@ -63,7 +61,7 @@ done
 
 # Source iTerm 2 shell integration
 # test -e "${HOME}/.iterm2_shell_integration.zsh" && source # "$HOME/.iterm2_shell_integration.zsh"
-if [ -f "$HOME/.iterm2_shell_integration.zsh" ]; then
+if [[ "$TERM_PROGRAM" == "iTerm.app" && -f "$HOME/.iterm2_shell_integration.zsh" ]]; then
   source "$HOME/.iterm2_shell_integration.zsh"
 
   # iterm2_set_user_var rubyVersion $(rvm current)
@@ -80,18 +78,21 @@ bindkey -e
 # export DIRENV_LOG_FORMAT=
 # eval "$(direnv hook zsh)"
 
+# Powerlevel10k is temporarily disabled in favor of zsh/prompt.sh.
 # source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
-source $(brew --prefix)/opt/powerlevel10k/share/powerlevel10k/powerlevel10k.zsh-theme
+# source $(brew --prefix)/opt/powerlevel10k/share/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source ~/.p10k.zsh
+# source ~/.p10k.zsh
 # typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 if [ -f "/opt/homebrew/opt/asdf/libexec/asdf.sh" ]; then
   . /opt/homebrew/opt/asdf/libexec/asdf.sh
 fi
 
-. "$HOME/.cargo/env"
+if [ -d "$HOME/.cargo/bin" ]; then
+  export PATH="$HOME/.cargo/bin:$PATH"
+fi
 
 if [ -d "/opt/homebrew/opt/nvm" ]; then
   export NVM_DIR="$HOME/.nvm"
@@ -100,8 +101,7 @@ if [ -d "/opt/homebrew/opt/nvm" ]; then
 fi
 
 if type mise &>/dev/null; then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-  eval "$(mise activate zsh)"
+  eval "$(mise activate zsh --shims)"
 fi
 
 export PATH="/Users/chunisan/.bun/bin:$PATH"
@@ -125,5 +125,5 @@ export PATH="$PATH:/Users/chunisan/.cache/lm-studio/bin"
 
 [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
 
-# Kiro CLI post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh"
+# Kiro CLI integration only needs to load inside Kiro.
+[[ "$TERM_PROGRAM" == "kiro" && -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh"
