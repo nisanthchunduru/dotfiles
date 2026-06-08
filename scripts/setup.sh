@@ -25,13 +25,8 @@ echo "Cloned dotfiles repo."
 
 echo "Install vundle..."
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-echo Installed vundle"
-
-echo "Installing rcm..."
-brew tap thoughtbot/formulae
-brew install rcm
-echo "Installed rcm"
+echo "Installed vundle"
 
 echo "Symlinking dotfiles..."
-rcup -d ~/repos/dotfiles -K
+bash "$HOME/repos/dotfiles/scripts/symlink-dotfiles.sh"
 echo "Symlinked dotfiles"
