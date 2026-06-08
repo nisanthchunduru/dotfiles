@@ -110,7 +110,7 @@ export PATH="/Users/chunisan/.bun/bin:$PATH"
 export PATH="/Users/chunisan/.codeium/windsurf/bin:$PATH"
 
 # Added by Antigravity
-export PATH="/Users/$HOME/.antigravity/antigravity/bin:$PATH"
+export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 
 # Add ~/.local/bin to PATH for cursor-agent
 export PATH="$HOME/.local/bin:$PATH"
