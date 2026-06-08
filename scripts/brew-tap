@@ -1,0 +1,68 @@
+#!/usr/bin/env ruby
+
+require "json"
+
+def run_command(command)
+  output = `#{command}`
+  abort "Failed to run: #{command}" unless $?.success?
+  output
+end
+
+def list_taps(unused_only)
+  taps = run_command("brew tap").split("\n")
+  if unused_only
+    installed = JSON.parse(run_command("brew info --installed --json=v2"))
+    used_taps = ((installed["formulae"] || []).map { |f| f["tap"] } +
+                 (installed["casks"] || []).map { |c| c["tap"] }).compact.uniq
+    taps.reject! { |t| used_taps.include?(t) }
+  end
+  puts taps
+end
+
+def list_tap_packages(tap_name, installed_only)
+  if installed_only
+    output = JSON.parse(run_command("brew info --installed --json=v2"))
+    puts "==> Installed Formulae\n"
+    (output["formulae"] || []).each { |f| puts "  #{f["name"]}" if f["tap"] == tap_name }
+    puts "==> Installed Casks\n"
+    (output["casks"] || []).each { |c| puts "  #{c["token"]}" if c["tap"] == tap_name }
+  else
+    info = JSON.parse(run_command("brew tap-info --json #{tap_name}")).first
+    ((info["formula_names"] || []) + (info["cask_tokens"] || [])).each { |name| puts name }
+  end
+end
+
+def usage
+  puts <<~USAGE
+    Usage: #{$PROGRAM_NAME} <command> [options]
+
+    Commands:
+      list [--unused]                        List all taps (--unused for taps with no installed packages)
+      list-tap-packages <tap> [--installed]  List packages from a tap
+      <tap> list [--installed]               List packages from a tap (alternative)
+      help                                   Show this help
+  USAGE
+  exit
+end
+
+command = ARGV.shift
+case command
+when "list"
+  list_taps(ARGV.include?("--unused"))
+when "list-tap-packages"
+  tap_name = ARGV.reject { |a| a.start_with?("-") }.first
+  usage if tap_name.nil? || tap_name.empty?
+  installed_only = ARGV.include?("--installed")
+  list_tap_packages(tap_name, installed_only)
+when "help", "-h", "--help", nil
+  usage
+else
+  # Assume command is a tap name: brew-tap <tap> list [--installed]
+  if ARGV.first == "list"
+    tap_name = command
+    installed_only = ARGV.include?("--installed")
+    list_tap_packages(tap_name, installed_only)
+  else
+    usage
+  end
+end
