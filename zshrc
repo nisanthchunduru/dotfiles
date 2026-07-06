@@ -123,6 +123,15 @@ export PATH="$PATH:/Users/chunisan/.cache/lm-studio/bin"
 
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
+# Added by Antigravity IDE
+export PATH="/Users/nisanth/.antigravity-ide/antigravity-ide/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/nisanth/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/nisanth/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/nisanth/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/nisanth/google-cloud-sdk/completion.zsh.inc'; fi
+
 [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
 
 # Kiro CLI integration only needs to load inside Kiro.
