@@ -1,7 +1,7 @@
-alias bedrock-models-ids='aws bedrock list-foundation-models --query "modelSummaries[].modelId" --region us-east-1 --output text | tr "\t" "\n"'
-alias region-bedrock-models-ids='aws bedrock list-foundation-models --query "modelSummaries[].modelId" --output text | tr "\t" "\n"'
+alias bedrock-models-ids='aws bedrock list-foundation-models --query "modelSummaries[].modelId" --output text | tr "\t" "\n"'
+alias us-east-1-bedrock-models-ids='aws bedrock list-foundation-models --query "modelSummaries[].modelId" --region us-east-1 --output text | tr "\t" "\n"'
 
-bedrock-model-inference-profile-arn() {
+us-east-1-bedrock-model-inference-profile-arn() {
   local MODEL_ID="$1"
 
   if [[ -z "$MODEL_ID" ]]; then
@@ -45,3 +45,6 @@ bedrock-model-inference-profile-arn() {
 
   echo "$PROFILE_ARN"
 }
+
+alias bedrock-mantle-models-ids='awscurl --service bedrock-mantle https://bedrock-mantle.us-east-1.api.aws/v1/models | jq -r ".data[].id"'
+alias us-east-1-bedrock-mantle-models-ids='awscurl --service bedrock-mantle --region us-east-1 https://bedrock-mantle.us-east-1.api.aws/v1/models | jq -r ".data[].id"'
