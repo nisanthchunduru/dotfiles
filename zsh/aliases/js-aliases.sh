@@ -1,5 +1,5 @@
 # NPM
-npm-upgrade-global() {
+npm-upgrade-global-packages() {
   local root pkgs=() name dir
   root=$(npm root -g 2>/dev/null) || return 1
 
