@@ -10,6 +10,12 @@ echo "Installing mise..."
 eval "$(curl https://mise.run)"
 echo "Installed mise"
 
+echo "Installing pi..."
+npm install -g --ignore-scripts @earendil-works/pi-coding-agent
+pi install npm:pi-mcp-adapter
+pi install npm:pi-bedrock-mantle
+echo "Installed pi"
+
 echo "Installing z..."
 brew install z
 echo "Installed z"
