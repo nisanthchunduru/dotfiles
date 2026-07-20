@@ -113,4 +113,5 @@ ensure_repository \
 
 echo "Symlinking dotfiles..."
 DOTFILES_DIR="$dotfiles_dir" bash "$dotfiles_dir/scripts/symlink-dotfiles.sh"
-echo "Setup complete."
+
+echo "Done ✅ "
