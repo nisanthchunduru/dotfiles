@@ -1,0 +1,11 @@
+[tasks.litellm]
+description = "LiteLLM"
+run = "litellm --config config.yaml"
+
+[tasks.tunnel]
+description = "LiteLLM Cloudflare tunnel"
+run = "cloudflared tunnel run ll"
+
+[tasks.start]
+description = "Start LiteLLM and a Cloudflare tunnel"
+depends = ["litellm", "tunnel"]

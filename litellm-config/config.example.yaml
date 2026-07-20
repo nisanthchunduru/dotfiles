@@ -1,0 +1,9 @@
+general_settings:
+  master_key: your-master-key
+
+model_list:
+  - model_name: ll-op-45
+    litellm_params:
+      model: bedrock/arn:aws:bedrock:us-east-1:123456789012:inference-profile/us.anthropic.claude-opus-4-5-20251101-v1:0
+      aws_profile_name: default
+      aws_region_name: us-east-1
