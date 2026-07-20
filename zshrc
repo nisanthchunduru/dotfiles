@@ -8,9 +8,9 @@
 #   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 # fi
 
-export DOTFILES=~/repos/dotfiles
-
-export ZSH_HOME=~/.zsh
+export DOTFILES_DIR="${${(%):-%N}:A:h}"
+export ZSH_DIR="$DOTFILES_DIR/zsh"
+unset DOTFILES ZSH_HOME
 export PATH="$HOME/bin:$PATH"
 
 # export EDITOR='vim'
@@ -25,8 +25,8 @@ setopt extendedglob
 # zplug "chrisands/zsh-yarn-completions", defer:2
 # zplug "chrisands/zsh-yarn-completions"
 
-# for file ($ZSH_HOME/^.zshrc) source $file
-# for file ($ZSH_HOME/^.zshrc) do
+# for file ($ZSH_DIR/^.zshrc) source $file
+# for file ($ZSH_DIR/^.zshrc) do
 #   filename=`basename $file`
 #   if [[ $filename == ",zshrc" ]] then
 #     continue
@@ -34,11 +34,11 @@ setopt extendedglob
 #
 #   source $file
 # done
-# source $ZSH_HOME/oh-my-zsh.sh
+# source $ZSH_DIR/oh-my-zsh.sh
 # unalias gpu
-source $ZSH_HOME/prompt.sh
-source $ZSH_HOME/aliases.sh
-source $ZSH_HOME/tools.sh
+source $ZSH_DIR/prompt.sh
+source $ZSH_DIR/aliases.sh
+source $ZSH_DIR/tools.sh
 
 # http://unix.stackexchange.com/questions/6620/how-to-edit-command-line-in-full-screen-editor-in-zsh
 autoload edit-command-line
@@ -47,17 +47,8 @@ zle -N edit-command-line
 
 export PATH="./node_modules/.bin:$PATH"
 
-# Add my functions to fpath
-fpath=($ZSH_HOME/functions $fpath)
-
-# fpath=($ZSH_HOME/completions $fpath)
-
 # Load my functions
-# for file ($ZSH_HOME/functions/*) autoload -Uz $(basename $file)
-for file ($ZSH_HOME/functions/*~*\.disabled); do
-  function_name=$(basename $file)
-  autoload -Uz $function_name
-done
+source "$ZSH_DIR/functions.sh"
 
 # Source iTerm 2 shell integration
 # test -e "${HOME}/.iterm2_shell_integration.zsh" && source # "$HOME/.iterm2_shell_integration.zsh"
