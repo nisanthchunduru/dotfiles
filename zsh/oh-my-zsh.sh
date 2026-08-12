@@ -48,7 +48,6 @@ DISABLE_LS_COLORS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # plugins=(git)
-# plugins=(osx brew rvm gem rails)
 # Partially borrowed from https://stackoverflow.com/questions/58187542/how-to-setup-vi-editing-mode-for-zsh/58188295#58188295
 plugins=(macos git vi-mode zsh-yarn-completions)
 

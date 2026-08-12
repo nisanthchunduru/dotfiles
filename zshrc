@@ -61,9 +61,6 @@ source "$ZSH_DIR/functions.sh"
 # test -e "${HOME}/.iterm2_shell_integration.zsh" && source # "$HOME/.iterm2_shell_integration.zsh"
 if [[ "$TERM_PROGRAM" == "iTerm.app" && -f "$HOME/.iterm2_shell_integration.zsh" ]]; then
   source "$HOME/.iterm2_shell_integration.zsh"
-
-  # iterm2_set_user_var rubyVersion $(rvm current)
-  # iterm2_set_user_var nodeVersion "node $(nvm current)"
 fi
 
 # Turn on Emacs mode
@@ -84,18 +81,8 @@ bindkey -e
 # source ~/.p10k.zsh
 # typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
-if [ -f "/opt/homebrew/opt/asdf/libexec/asdf.sh" ]; then
-  . /opt/homebrew/opt/asdf/libexec/asdf.sh
-fi
-
 if [ -d "$HOME/.cargo/bin" ]; then
   export PATH="$HOME/.cargo/bin:$PATH"
-fi
-
-if [ -d "/opt/homebrew/opt/nvm" ]; then
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 fi
 
 if type mise &>/dev/null; then
