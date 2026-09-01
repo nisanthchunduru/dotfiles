@@ -1,6 +1,6 @@
 # @example
-#   RAILS_ENV=production run-in-kube-pod bundle exec rails console
-run-in-kube-pod () {
+#   RAILS_ENV=production kube-pod-run bundle exec rails console
+kube-pod-run () {
   command=$@
   a_pod_name=$(kubectl -n $RAILS_ENV get pods --no-headers=true -o name | head -n 1)
   # kubectl exec -n $RAILS_ENV -ti $a_pod_name -- $command
