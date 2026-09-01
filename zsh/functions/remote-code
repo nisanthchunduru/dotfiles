@@ -1,0 +1,22 @@
+remote-code() {
+  if [[ $# -ne 2 ]]; then
+    echo "Usage: remote-code <ssh-host> <remote-path>"
+    return 1
+  fi
+
+  local host="$1"
+  local absolute_path
+
+  absolute_path=$(
+    printf '%s\n' "$2" | ssh "$host" '
+      IFS= read -r requested_path || exit 1
+      case "$requested_path" in
+        "~") requested_path="$HOME" ;;
+        "~/"*) requested_path="$HOME/${requested_path#\~/}" ;;
+      esac
+      realpath -e -- "$requested_path"
+    '
+  ) || return 1
+
+  code --remote "ssh-remote+$host" "$absolute_path"
+}
