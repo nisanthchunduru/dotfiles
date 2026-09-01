@@ -11,10 +11,7 @@ remote-code() {
     printf '%s\n' "$2" | ssh "$host" '
       realpath_command=$(command -v realpath) || exit 1
       IFS= read -r path || exit 1
-      case "$path" in
-        "~") path="$HOME" ;;
-        "~/"*) path="$HOME/${path#\~/}" ;;
-      esac
+      eval "path=$path"
       "$realpath_command" -e -- "$path"
     '
   ) || return 1
