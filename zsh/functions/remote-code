@@ -9,12 +9,13 @@ remote-code() {
 
   absolute_path=$(
     printf '%s\n' "$2" | ssh "$host" '
-      IFS= read -r requested_path || exit 1
-      case "$requested_path" in
-        "~") requested_path="$HOME" ;;
-        "~/"*) requested_path="$HOME/${requested_path#\~/}" ;;
+      realpath_command=$(command -v realpath) || exit 1
+      IFS= read -r path || exit 1
+      case "$path" in
+        "~") path="$HOME" ;;
+        "~/"*) path="$HOME/${path#\~/}" ;;
       esac
-      realpath -e -- "$requested_path"
+      "$realpath_command" -e -- "$path"
     '
   ) || return 1
 
