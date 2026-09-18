@@ -1,6 +1,6 @@
-remote-code() {
+code-remote() {
   if [[ $# -ne 2 ]]; then
-    echo "Usage: remote-code <ssh-host> <remote-path>"
+    echo "Usage: code-remote <ssh-host> <remote-path>"
     return 1
   fi
 
