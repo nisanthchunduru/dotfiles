@@ -1,0 +1,49 @@
+unalias ssh-tunnel ssh-reverse-tunnel 2>/dev/null || true
+
+_ssh-port-tunnel() {
+  local forwarding_option="$1"
+  shift
+
+  local tunnel_name=ssh-tunnel
+  [[ "$forwarding_option" == -R ]] && tunnel_name=ssh-reverse-tunnel
+
+  if (( $# < 2 )); then
+    printf 'Usage: %s <port> [ssh-options] <ssh-host>\n' "$tunnel_name" >&2
+    return 1
+  fi
+
+  local port="$1"
+  shift
+
+  if [[ "$port" != <-> || ${#port} -gt 5 ]]; then
+    printf 'Port must be an integer between 1 and 65535.\n' >&2
+    return 1
+  fi
+
+  if (( 10#$port < 1 || 10#$port > 65535 )); then
+    printf 'Port must be an integer between 1 and 65535.\n' >&2
+    return 1
+  fi
+
+  # ssh -NT \
+  #   -o ExitOnForwardFailure=yes \
+  #   -o ServerAliveInterval=30 \
+  #   -o ServerAliveCountMax=3 \
+  #   "$forwarding_option" "127.0.0.1:${port}:127.0.0.1:${port}" \
+  #   "$@"
+
+  AUTOSSH_GATETIME=0 AUTOSSH_POLL=30 autossh -M 0 -NT \
+    -o ExitOnForwardFailure=yes \
+    -o ServerAliveInterval=30 \
+    -o ServerAliveCountMax=3 \
+    "$forwarding_option" "127.0.0.1:${port}:127.0.0.1:${port}" \
+    "$@"
+}
+
+function ssh-tunnel {
+  _ssh-port-tunnel -L "$@"
+}
+
+function ssh-reverse-tunnel {
+  _ssh-port-tunnel -R "$@"
+}
