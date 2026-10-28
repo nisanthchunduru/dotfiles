@@ -1,0 +1,13 @@
+obsidian-open-file() {
+  if [[ $# -ne 1 ]]; then
+    printf '%s\n' 'Usage: obsidian-open-file <file.md>' >&2
+    return 1
+  fi
+
+  if [[ ! -f "$1" ]]; then
+    printf 'File not found: %s\n' "$1" >&2
+    return 1
+  fi
+
+  open -a Obsidian "${1:A}"
+}
