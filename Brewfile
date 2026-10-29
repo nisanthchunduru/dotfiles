@@ -1,10 +1,12 @@
 # Install Homebrew Bundle and all the packages listed in this Brewfile
 #
-#   brew tap homebrew/bundle
 #   brew bundle
 #
 # @see https://robots.thoughtbot.com/brewfile-a-gemfile-but-for-homebrew More details
 
+# Apps
+tap "smartthingscommunity/smartthings", trusted: true
+brew "smartthingscommunity/smartthings/smartthings"
 brew "orbstack"
 brew "tableplus"
 brew "wget"
@@ -36,7 +38,6 @@ brew "awscli"
 brew "tmux"
 brew "tpm"
 brew "mosh"
-brew "MisterTea/et/et"
 brew "autossh"
 brew "trzsz-ssh"
 mas "WhatsApp", id: 310633997
@@ -54,6 +55,8 @@ mas "Slack", id: 803453959
 # mas "Newton", id: 1059655371
 # mas "MenuTab for Facebook", id: 421358730
 # mas "App Cleaner", id: 1013897218
+tap "go-task/tap", trusted: true
+cask "go-task/tap/go-task"
 cask "visual-studio-code"
 cask "kiro"
 cask "cursor"
@@ -65,7 +68,7 @@ cask "vlc"
 cask "iterm2"
 cask "fork"
 cask "itsycal"
-# cask "dropbox"
+cask "dropbox"
 # cask "sublime-text"
 cask "firefox"
 # cask "franz"
@@ -77,7 +80,6 @@ cask "webtorrent"
 cask "meld"
 
 # Fonts
-tap "homebrew/cask-fonts"
 cask "font-ubuntu"
 # cask "font-hack"
 # cask "font-fira-mono"
