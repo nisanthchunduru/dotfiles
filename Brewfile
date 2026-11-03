@@ -63,6 +63,8 @@ cask "cursor"
 cask "windsurf"
 cask "antigravity"
 cask "google-chrome"
+tap "deadhearth01/tap", trusted: true
+cask "deadhearth01/tap/mitosis"
 cask "logi-options+"
 cask "vlc"
 cask "iterm2"
