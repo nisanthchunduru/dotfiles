@@ -3,3 +3,4 @@ alias sourcetree='open -a SourceTree'
 alias st=sourcetree .
 alias macdown='open -a MacDown'
 alias typora='open -a Typora'
+alias my-applications='open -a Finder "$HOME/Applications"'
