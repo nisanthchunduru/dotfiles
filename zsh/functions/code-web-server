@@ -1,0 +1,20 @@
+unalias code-web-server 2>/dev/null || true
+function code-web-server {
+    local SERVER_DATA_DIR="${VSCODE_AGENT_FOLDER:-$HOME/.vscode-server}"
+    local -a SERVERS=("${VSCODE_CLI_DATA_DIR:-$HOME/.vscode/cli}"/serve-web/*/bin/code-server(N.om))
+    local SERVER="${SERVERS[1]}"
+    local INSTALLED_EXTENSIONS
+
+    if [[ ! -x "$SERVER" ]]; then
+        printf '%s\n' 'No downloaded VS Code web server found. Run code serve-web --host 127.0.0.1 --port 8000, open its browser URL once, stop it, then retry code-web-server.' >&2
+        return 1
+    fi
+
+    INSTALLED_EXTENSIONS=$("$SERVER" --server-data-dir "$SERVER_DATA_DIR" --list-extensions) || return $?
+    if (( ! ${${(f)INSTALLED_EXTENSIONS}[(Ie)zaaack.markdown-editor]} )); then
+        "$SERVER" --server-data-dir "$SERVER_DATA_DIR" \
+            --install-extension zaaack.markdown-editor || return $?
+    fi
+
+    code serve-web --server-data-dir "$SERVER_DATA_DIR" --host 127.0.0.1 --port 8000
+}
